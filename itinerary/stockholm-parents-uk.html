@@ -1,0 +1,586 @@
+<title>Стокгольм для батьків</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Literata:opsz,wght@7..72,500&family=Onest:wght@400;500;600&display=swap">
+<style>
+/* Layout: one reading column; each day is a departure-board style timetable, with a sticky day switcher */
+:root {
+  --bg: #F1F4F3;
+  --surface: #FFFFFF;
+  --ink: #15202B;
+  --muted: #56636F;
+  --line: #D6DDE1;
+  --water: #1B5E8C;
+  --water-soft: #E2EDF5;
+  --ochre: #9A600E;
+  --ochre-soft: #F5EAD8;
+  --sl-blue: #0A7BC1;
+  --sl-red: #D52B2B;
+  --sl-green: #1C944A;
+  --sl-tram: #6B7882;
+  --sl-boat: #0E8A8A;
+  --sl-train: #CF3F86;
+  --display: "Literata", Georgia, "Times New Roman", serif;
+  --body: "Onest", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0E151C; --surface: #15202A; --ink: #E5EBEF; --muted: #9BA9B5; --line: #263441;
+    --water: #7BBBE8; --water-soft: #15314A; --ochre: #E6AB55; --ochre-soft: #36280F;
+    --sl-blue: #3DA5E8; --sl-red: #F0605F; --sl-green: #43C072; --sl-tram: #A3B0BA; --sl-boat: #3CC0BE; --sl-train: #EE77B0;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0E151C; --surface: #15202A; --ink: #E5EBEF; --muted: #9BA9B5; --line: #263441;
+  --water: #7BBBE8; --water-soft: #15314A; --ochre: #E6AB55; --ochre-soft: #36280F;
+  --sl-blue: #3DA5E8; --sl-red: #F0605F; --sl-green: #43C072; --sl-tram: #A3B0BA; --sl-boat: #3CC0BE; --sl-train: #EE77B0;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--body);
+  font-size: 1rem;
+  line-height: 1.55;
+  padding-inline: 16px;
+  padding-block: 0 4rem;
+}
+.wrap { max-width: 46rem; margin-inline: auto; }
+a { color: var(--water); text-underline-offset: 2px; }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--water); outline-offset: 2px; border-radius: 4px; }
+
+/* Header */
+header.top { padding-block: 2.5rem 1.5rem; display: grid; gap: 0.75rem; }
+.eyebrow {
+  font-family: var(--mono); font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted);
+}
+h1 {
+  font-family: var(--display); font-weight: 500; font-size: clamp(2.1rem, 7vw, 3.1rem);
+  line-height: 1.05; margin: 0; text-wrap: balance;
+}
+.lede { margin: 0; max-width: 38rem; color: var(--muted); font-size: 1.05rem; }
+.facts {
+  list-style: none; margin: 0.5rem 0 0; padding: 0;
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(10.5rem, 1fr)); gap: 0.5rem 1.25rem;
+  border-top: 1px solid var(--line); padding-top: 1rem;
+}
+.facts li { display: grid; gap: 0.1rem; min-width: 0; }
+.facts .k { font-family: var(--mono); font-size: 0.72rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); }
+.facts .v { font-weight: 600; }
+
+/* Sticky day switcher */
+nav.days {
+  position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5;
+  background: var(--bg); border-bottom: 1px solid var(--line);
+  margin-inline: -16px; padding: 0.6rem 16px;
+}
+nav.days ul { list-style: none; margin: 0 auto; padding: 0; max-width: 46rem; display: flex; gap: 0.4rem; overflow-x: auto; scrollbar-width: none; }
+nav.days a {
+  display: inline-block; white-space: nowrap; text-decoration: none; color: var(--ink);
+  font-family: var(--mono); font-size: 0.82rem; padding: 0.3rem 0.7rem; border: 1px solid var(--line); border-radius: 999px; background: var(--surface);
+}
+nav.days a:hover { border-color: var(--water); }
+
+/* Day sections */
+section.day { padding-top: 2.5rem; scroll-margin-top: 3.5rem; }
+.day-head { display: grid; gap: 0.35rem; margin-bottom: 1.25rem; }
+.day-head h2 {
+  font-family: var(--display); font-weight: 500; font-size: clamp(1.6rem, 5vw, 2.1rem); line-height: 1.1; margin: 0;
+  display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.25rem 0.75rem;
+}
+.day-head h2 .date { font-family: var(--mono); font-size: 0.9rem; color: var(--muted); letter-spacing: 0.02em; }
+.day-head p { margin: 0; color: var(--muted); }
+.today-badge {
+  font-family: var(--mono); font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em;
+  background: var(--ochre); color: var(--surface); padding: 0.15rem 0.5rem; border-radius: 4px;
+}
+.who { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 0.25rem; }
+.tag {
+  font-family: var(--mono); font-size: 0.74rem; letter-spacing: 0.04em;
+  padding: 0.18rem 0.55rem; border-radius: 4px; border: 1px solid var(--line); color: var(--muted); background: var(--surface);
+}
+.tag.together { background: var(--water-soft); border-color: transparent; color: var(--water); }
+.tag.solo { background: var(--ochre-soft); border-color: transparent; color: var(--ochre); }
+
+/* Timetable */
+ol.tt { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--line); }
+ol.tt > li {
+  display: grid; grid-template-columns: 4.25rem 1fr; gap: 0 1rem;
+  padding-block: 0.95rem; border-bottom: 1px solid var(--line);
+}
+ol.tt time {
+  font-family: var(--mono); font-weight: 500; font-size: 0.95rem; font-variant-numeric: tabular-nums;
+  color: var(--water); padding-top: 0.1rem;
+}
+ol.tt li.solo-part time { color: var(--ochre); }
+.stop { min-width: 0; display: grid; gap: 0.3rem; }
+.stop h3 { margin: 0; font-size: 1.05rem; font-weight: 600; line-height: 1.3; }
+.stop p { margin: 0; max-width: 62ch; }
+.chips { display: flex; flex-wrap: wrap; gap: 0.35rem; margin-top: 0.15rem; }
+.chip {
+  display: inline-flex; align-items: center; gap: 0.35rem;
+  font-family: var(--mono); font-size: 0.74rem; line-height: 1.2;
+  padding: 0.2rem 0.5rem; border-radius: 4px; border: 1px solid var(--line); color: var(--ink); background: var(--surface);
+}
+.chip::before { content: ""; width: 0.55rem; height: 0.55rem; border-radius: 50%; background: var(--c, var(--muted)); flex: none; }
+.chip.blue { --c: var(--sl-blue); }
+.chip.red { --c: var(--sl-red); }
+.chip.green { --c: var(--sl-green); }
+.chip.tram { --c: var(--sl-tram); }
+.chip.boat { --c: var(--sl-boat); }
+.chip.train { --c: var(--sl-train); }
+.chip.hours { border-style: dashed; }
+.chip.hours::before { border-radius: 2px; background: var(--ochre); }
+.chip.warn { border-color: var(--ochre); }
+.chip.warn::before { background: var(--ochre); }
+
+li.handover {
+  display: block !important; padding-block: 0.6rem !important;
+  font-family: var(--mono); font-size: 0.82rem; letter-spacing: 0.04em; color: var(--water);
+  background: var(--water-soft); border-bottom: 1px solid var(--line);
+  padding-inline: 0.75rem;
+}
+.note-solo {
+  margin: 0 0 1rem; padding: 0.75rem 0.9rem; background: var(--ochre-soft); border-radius: 6px; color: var(--ink);
+}
+.note-solo strong { color: var(--ochre); }
+
+aside.swap {
+  margin-top: 1rem; padding: 0.85rem 1rem; border: 1px dashed var(--line); border-radius: 6px; background: var(--surface);
+  display: grid; gap: 0.5rem;
+}
+aside.swap h4 { margin: 0; font-family: var(--mono); font-size: 0.76rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); }
+aside.swap ul { margin: 0; padding-left: 1.1rem; display: grid; gap: 0.4rem; }
+
+/* Hours table */
+section.ref { padding-top: 3rem; scroll-margin-top: 3.5rem; }
+section.ref h2 { font-family: var(--display); font-weight: 500; font-size: 1.6rem; margin: 0 0 0.35rem; }
+section.ref > p { margin: 0 0 1rem; color: var(--muted); max-width: 62ch; }
+.table-scroll { overflow-x: auto; border: 1px solid var(--line); border-radius: 6px; background: var(--surface); }
+table { border-collapse: collapse; width: 100%; min-width: 34rem; font-size: 0.92rem; }
+th, td { text-align: left; padding: 0.55rem 0.75rem; border-bottom: 1px solid var(--line); vertical-align: top; }
+th { font-family: var(--mono); font-weight: 500; font-size: 0.72rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); }
+tbody tr:last-child td { border-bottom: 0; }
+td.h { font-family: var(--mono); font-variant-numeric: tabular-nums; white-space: nowrap; }
+td .day-pill { font-family: var(--mono); font-size: 0.74rem; color: var(--muted); }
+
+/* Ideas */
+.ideas { display: grid; grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr)); gap: 1.25rem 2rem; }
+.ideas > div { min-width: 0; }
+.ideas h3 { margin: 0 0 0.5rem; font-size: 0.78rem; font-family: var(--mono); font-weight: 500; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); }
+.ideas ul { margin: 0; padding: 0; list-style: none; display: grid; gap: 0.7rem; }
+.ideas li strong { display: block; }
+.ideas li span { color: var(--muted); font-size: 0.94rem; }
+
+.sources { margin-top: 1rem; font-size: 0.88rem; color: var(--muted); }
+.sources ul { margin: 0.4rem 0 0; padding-left: 1.1rem; display: grid; gap: 0.25rem; }
+footer { margin-top: 3rem; padding-top: 1rem; border-top: 1px solid var(--line); color: var(--muted); font-size: 0.88rem; }
+
+@media (max-width: 30rem) {
+  ol.tt > li { grid-template-columns: 3.6rem 1fr; gap: 0 0.75rem; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  html { scroll-behavior: smooth; }
+}
+</style>
+
+<div class="wrap" lang="uk">
+  <header class="top">
+    <div class="eyebrow">Ср 7 – Пт 9 жовтня 2026 · Стокгольм</div>
+    <h1>Стокгольм для батьків</h1>
+    <p class="lede">План на три дні. Години роботи перевірені саме на ці дати. Середу проводимо разом, у четвер удень ви гуляєте самі, а в п’ятницю до 12:00 ви вже в аеропорту Арланда.</p>
+    <ul class="facts">
+      <li><span class="k">Дім</span><span class="v">Västra skogen · синя лінія</span></li>
+      <li><span class="k">Захід сонця</span><span class="v">Близько 18:00</span></li>
+      <li><span class="k">Скансен у будні</span><span class="v">До 15:00</span></li>
+      <li><span class="k">Нобелівка з літератури</span><span class="v">Чт 13:00, Stortorget</span></li>
+    </ul>
+  </header>
+
+  <nav class="days" aria-label="Дні">
+    <ul>
+      <li><a href="#wed">Ср 7</a></li>
+      <li><a href="#thu">Чт 8</a></li>
+      <li><a href="#fri">Пт 9</a></li>
+      <li><a href="#hours">Години</a></li>
+      <li><a href="#ideas">Ще ідеї</a></li>
+    </ul>
+  </nav>
+
+  <!-- СЕРЕДА -->
+  <section class="day" id="wed" data-date="2026-10-07">
+    <div class="day-head">
+      <h2>Середа <span class="date">7 жовтня</span></h2>
+      <p>Кораблик на Юргорден, Скансен, Королівський палац, Старе місто і краєвид із Седермальму.</p>
+      <div class="who"><span class="tag together">Разом увесь день</span></div>
+    </div>
+    <ol class="tt">
+      <li>
+        <time>09:30</time>
+        <div class="stop">
+          <h3>Сніданок у нас</h3>
+          <p>Перед виходом купимо вам у застосунку SL 72-годинні квитки. Якщо активувати їх близько 10:30, вони діють до ранку суботи: метро, трамвай 7, кораблик і приміський поїзд.</p>
+        </div>
+      </li>
+      <li>
+        <time>10:30</time>
+        <div class="stop">
+          <h3>Метро до Slussen</h3>
+          <p>Синьою лінією до T-Centralen, далі червоною або зеленою лінією дві зупинки на південь до Slussen. Разом близько 25 хвилин.</p>
+          <div class="chips"><span class="chip blue">Синя лінія</span><span class="chip red">Червона</span><span class="chip green">Зелена</span></div>
+        </div>
+      </li>
+      <li>
+        <time>11:00</time>
+        <div class="stop">
+          <h3>Кораблик SL на Юргорден</h3>
+          <p>Пором Djurgårdsfärjan, лінія 82, від причалу біля Slussen до Allmänna gränd. Близько 10 хвилин по воді повз Гамла Стан і острів Шеппсгольмен. Квиток SL на ньому діє. Від причалу 10 хвилин пішки до головного входу в Скансен.</p>
+          <div class="chips"><span class="chip boat">Кораблик 82</span><span class="chip hours">Приблизно кожні 15 хв</span></div>
+        </div>
+      </li>
+      <li>
+        <time>11:20</time>
+        <div class="stop">
+          <h3>Скансен (Skansen)</h3>
+          <p>Музей просто неба і зоопарк північних тварин: лосі, ведмеді, тюлені, старе містечко з ремісничими майстернями і краєвиди на місто з пагорба. Там і пообідаємо. У жовтні в будні Скансен зачиняється рано, тому починаємо з нього.</p>
+          <div class="chips"><span class="chip hours warn">Відчинено 10:00–15:00</span></div>
+        </div>
+      </li>
+      <li>
+        <time>14:00</time>
+        <div class="stop">
+          <h3>Кораблик назад до Slussen</h3>
+          <p>Знову лінія 82 від Allmänna gränd. Дорогою назад він заходить на Шеппсгольмен, тож це близько 15 хвилин.</p>
+          <div class="chips"><span class="chip boat">Кораблик 82</span></div>
+        </div>
+      </li>
+      <li>
+        <time>14:30</time>
+        <div class="stop">
+          <h3>Королівський палац (Kungliga slottet)</h3>
+          <p>10 хвилин пішки від Slussen угору вулицею Slottsbacken. Королівські апартаменти і Скарбниця займуть близько години. Палац зачиняється о 16:00.</p>
+          <div class="chips"><span class="chip hours">Відчинено 10:00–16:00</span></div>
+        </div>
+      </li>
+      <li>
+        <time>16:00</time>
+        <div class="stop">
+          <h3>Фіка в Skeppsbro Bageri</h3>
+          <p>Фіка — це шведська перерва на каву з булочкою. Пекарня стоїть на набережній Skeppsbron просто під палацом. Булочка з кардамоном і кава біля води.</p>
+          <div class="chips"><span class="chip hours">До 18:00</span></div>
+        </div>
+      </li>
+      <li>
+        <time>16:45</time>
+        <div class="stop">
+          <h3>Прогулянка Гамла Стан</h3>
+          <p>Площа Stortorget зі старою Біржею (сюди ви повернетеся в четвер), Mårten Trotzigs gränd, найвужча вуличка міста завширшки близько 90 см, потім Västerlånggatan і Köpmangatan.</p>
+        </div>
+      </li>
+      <li>
+        <time>17:40</time>
+        <div class="stop">
+          <h3>Оглядовий майданчик на Fjällgatan</h3>
+          <p>Через Slussen піднімаємося на Fjällgatan на Седермальмі, це близько 15 хвилин. Звідти видно Гамла Стан, Шеппсгольмен і Юргорден в останньому світлі. Захід сонця близько 18:05.</p>
+        </div>
+      </li>
+      <li>
+        <time>18:15</time>
+        <div class="stop">
+          <h3>Вечеря в Hermans</h3>
+          <p>Вегетаріанський шведський стіл за кілька будинків далі по Fjällgatan, з тим самим краєвидом. Тут добрі шанси на страви з баклажанами. Зазвичай працює до 20:00 з понеділка по четвер, тож краще прийти до 18:30.</p>
+          <div class="chips"><span class="chip hours">До ~20:00</span></div>
+        </div>
+      </li>
+    </ol>
+    <aside class="swap">
+      <h4>Якщо середа буде задовга</h4>
+      <ul>
+        <li>Пропустимо зали палацу і просто пройдемося його зовнішнім двором. Фіка і прогулянка все одно вміщаються.</li>
+        <li>Якщо на вечерю хочеться м’яса, залишимо Hermans на інший раз і повечеряємо в Гамла Стан після прогулянки.</li>
+      </ul>
+    </aside>
+  </section>
+
+  <!-- ЧЕТВЕР -->
+  <section class="day" id="thu" data-date="2026-10-08">
+    <div class="day-head">
+      <h2>Четвер <span class="date">8 жовтня</span></h2>
+      <p>Музей Васа, ринок Hötorgshallen, оголошення Нобелівської премії з літератури, Ратуша, а ввечері захід сонця на Skinnarviksberget.</p>
+      <div class="who"><span class="tag solo">Самостійно до 16:30</span><span class="tag together">Разом з 16:30</span></div>
+    </div>
+    <p class="note-solo"><strong>Як їздити:</strong> усі поїздки сьогодні покриває 72-годинний квиток SL. Найближчий рейс показують застосунок SL або Google Maps. Нижче вказано назви зупинок, які треба шукати на табло.</p>
+    <ol class="tt">
+      <li class="solo-part">
+        <time>09:30</time>
+        <div class="stop">
+          <h3>Синя лінія до Kungsträdgården</h3>
+          <p>Від Västra skogen синьою лінією до кінцевої, Kungsträdgården. Близько 15 хвилин. Сама станція — одна з мистецьких станцій метро.</p>
+          <div class="chips"><span class="chip blue">Синя лінія → Kungsträdgården</span></div>
+        </div>
+      </li>
+      <li class="solo-part">
+        <time>09:45</time>
+        <div class="stop">
+          <h3>Трамвай 7 до музею Васа</h3>
+          <p>Трамвай 7 у бік Djurgården, вийти на зупинці <em>Nordiska museet/Vasa</em>, близько 10 хвилин. Якщо надворі сухо, можна пройтися пішки набережною Strandvägen, це 25 хвилин.</p>
+          <div class="chips"><span class="chip tram">Трамвай 7</span></div>
+        </div>
+      </li>
+      <li class="solo-part">
+        <time>10:00</time>
+        <div class="stop">
+          <h3>Музей Васа (Vasamuseet)</h3>
+          <p>Військовий корабель, який затонув у першому ж плаванні 1628 року і був піднятий майже цілим у 1961-му. Почніть із короткого фільму, потім обійдіть корабель на всіх поверхах. Запитайте на касі, чи є фільм або аудіогід українською. Закладіть близько півтори години.</p>
+          <div class="chips"><span class="chip hours">Відчинено 10:00–17:00</span></div>
+        </div>
+      </li>
+      <li class="solo-part">
+        <time>11:35</time>
+        <div class="stop">
+          <h3>Трамвай 7 назад у центр</h3>
+          <p>З тієї ж зупинки у бік Sergels torg (це кінцева). Звідти 5 хвилин пішки до площі Hötorget.</p>
+          <div class="chips"><span class="chip tram">Трамвай 7 → Sergels torg</span></div>
+        </div>
+      </li>
+      <li class="solo-part">
+        <time>12:00</time>
+        <div class="stop">
+          <h3>Обід у Hötorgshallen</h3>
+          <p>Критий ринок на площі Hötorget. Зайдіть до місця з сендвічами або просто пройдіться між прилавками. Надворі працює фруктовий і квітковий ринок, а поруч стоїть синя будівля Konserthuset, де щороку 10 грудня вручають Нобелівські премії.</p>
+          <p><strong>Запасний варіант:</strong> обід із супермаркету. Hemköp Stockholm City під універмагом Åhléns City (Klarabergsgatan 50), 5 хвилин пішки: гарячий шведський стіл і салат-бар.</p>
+          <div class="chips"><span class="chip hours">Відчиняється о 10:00</span><span class="chip hours">Hemköp 07:00–23:00</span></div>
+        </div>
+      </li>
+      <li class="solo-part">
+        <time>12:40</time>
+        <div class="stop">
+          <h3>Зелена лінія до Gamla stan</h3>
+          <p>Зі станції Hötorget дві зупинки на південь до Gamla stan (будь-який поїзд у бік Hagsätra, Farsta strand або Skarpnäck). Звідти 5 хвилин пішки вгору до площі Stortorget.</p>
+          <div class="chips"><span class="chip green">Зелена лінія → Gamla stan</span></div>
+        </div>
+      </li>
+      <li class="solo-part">
+        <time>13:00</time>
+        <div class="stop">
+          <h3>Нобелівська премія з літератури наживо</h3>
+          <p>Шведська академія оголошує цьогорічного лауреата о 13:00 або трохи пізніше. Це відбувається в старій Біржі на Stortorget, у тій самій будівлі, де Музей Нобелівської премії, і музей транслює оголошення. Після цього залишайтеся оглянути музей.</p>
+          <div class="chips"><span class="chip hours">Музей 11:00–17:00</span></div>
+        </div>
+      </li>
+      <li class="solo-part">
+        <time>14:30</time>
+        <div class="stop">
+          <h3>Ратуша (Stadshuset)</h3>
+          <p>15–20 хвилин пішки через острів Riddarholmen. Внутрішній двір і сад над водою безкоштовні. Щоб побачити Блакитну і Золоту зали, приєднайтеся до екскурсії англійською о 15:00 (45 хв). Квитки продають у день візиту в крамниці Ратуші: 150 крон, для пенсіонерів 130. Вежа в цьому сезоні зачинена.</p>
+          <div class="chips"><span class="chip hours">Екскурсії англійською щогодини 10–15</span></div>
+        </div>
+      </li>
+      <li class="solo-part">
+        <time>15:55</time>
+        <div class="stop">
+          <h3>Червона лінія на Седермальм</h3>
+          <p>10 хвилин пішки до T-Centralen, далі червоною лінією чотири зупинки на південь до Zinkensdamm (будь-який поїзд у бік Norsborg або Fruängen).</p>
+          <div class="chips"><span class="chip red">Червона лінія → Zinkensdamm</span></div>
+        </div>
+      </li>
+      <li class="handover">16:30 · Я приєднуюся</li>
+      <li>
+        <time>16:30</time>
+        <div class="stop">
+          <h3>Фіка у Svedjan</h3>
+          <p>Зустрічаємося в пекарні Svedjan Bageri, Brännkyrkagatan 93, за кілька хвилин від станції Zinkensdamm.</p>
+          <div class="chips"><span class="chip hours">До 18:00</span></div>
+        </div>
+      </li>
+      <li>
+        <time>17:30</time>
+        <div class="stop">
+          <h3>Skinnarviksberget</h3>
+          <p>Невеликий підйом на найвищу природну точку в центрі міста. Сонце сідає близько 18:00 на заході над затокою Riddarfjärden, а навпроти, через воду, видно Ратушу. Якщо ще буде світло, пройдемося стежкою Monteliusvägen.</p>
+        </div>
+      </li>
+      <li>
+        <time>18:30</time>
+        <div class="stop">
+          <h3>Вечеря в Tabbouli</h3>
+          <p>Ліванські мезе на Tavastgatan 22, за кілька хвилин униз із пагорба. Страви з копченого баклажана, як-от мутабаль, — звичайна частина ліванського мезе, тож мамі має сподобатися. Столик забронюю заздалегідь: 08-429 82 55.</p>
+          <div class="chips"><span class="chip hours">Відчиняється о 17:00</span></div>
+        </div>
+      </li>
+    </ol>
+    <aside class="swap">
+      <h4>Інші варіанти на четвер</h4>
+      <ul>
+        <li><strong>Зміна варти замість Hötorgshallen.</strong> Вона починається о 12:15 у зовнішньому дворі палацу (з понеділка по суботу, близько 40 хвилин). Трамваєм 7 доїдьте лише до Kungsträdgården і пройдіть 10 хвилин до палацу. Звідти до Stortorget 3 хвилини, тож на 13:00 встигнете. Пообідайте в Гамла Стан після оголошення.</li>
+        <li><strong>Національний музей (Nationalmuseum) замість Ратуші.</strong> У четвер він працює з 11:00 до 20:00, а з 17:00 вхід безкоштовний. Туди можна піти й разом після моєї роботи замість Skinnarviksberget.</li>
+        <li><strong>Втомилися?</strong> Пропустіть Ратушу і їдьте на Седермальм раніше. У Svedjan добре чекати.</li>
+      </ul>
+    </aside>
+  </section>
+
+  <!-- П’ЯТНИЦЯ -->
+  <section class="day" id="fri" data-date="2026-10-09">
+    <div class="day-head">
+      <h2>П’ятниця <span class="date">9 жовтня</span></h2>
+      <p>Каролінський інститут до 10:00, остання фіка у Васастані — і просто в аеропорт Арланда.</p>
+      <div class="who"><span class="tag together">Разом до ~09:50</span><span class="tag solo">Далі самостійно</span></div>
+    </div>
+    <ol class="tt">
+      <li>
+        <time>08:00</time>
+        <div class="stop">
+          <h3>Сніданок і валізи</h3>
+          <p>Пакуємося до сніданку. Далі весь ранок веде просто в аеропорт, тож валізи беремо з собою.</p>
+        </div>
+      </li>
+      <li>
+        <time>09:00</time>
+        <div class="stop">
+          <h3>Каролінський інститут (KI)</h3>
+          <p>Перед роботою покажу вам кампус у Сольні: Aula Medica, Biomedicum і Nobel Forum, де в понеділок оголосили цьогорічну Нобелівську премію з фізіології або медицини.</p>
+        </div>
+      </li>
+      <li class="solo-part">
+        <time>09:50</time>
+        <div class="stop">
+          <h3>До району Vasastan</h3>
+          <p>Від кампусу до Lillebrors близько 2 км: 25 хвилин пішки через Hagastaden або кілька хвилин автобусом чи таксі. Покажу, яким автобусом найзручніше.</p>
+        </div>
+      </li>
+      <li class="solo-part">
+        <time>10:15</time>
+        <div class="stop">
+          <h3>Фіка в Lillebrors Bageri</h3>
+          <p>Rörstrandsgatan 10, біля S:t Eriksplan. Славиться булочками з кардамоном. Вихідний лише в понеділок.</p>
+          <div class="chips"><span class="chip hours">Відчинено з 08:00 або раніше</span></div>
+        </div>
+      </li>
+      <li class="solo-part">
+        <time>10:50</time>
+        <div class="stop">
+          <h3>Пішки до Odenplan</h3>
+          <p>Близько 10 хвилин вулицею Karlbergsvägen до станції Stockholm Odenplan.</p>
+        </div>
+      </li>
+      <li class="solo-part">
+        <time>11:05</time>
+        <div class="stop">
+          <h3>Приміський поїзд до Arlanda C</h3>
+          <p>Pendeltåg зі станції Stockholm Odenplan у бік Uppsala C, близько 36 хвилин до Arlanda C. Крім квитка SL, кожен дорослий має сплатити збір за проїзд до Арланди, близько 150 крон, у застосунку SL до посадки. Точний рейс перевіримо напередодні ввечері.</p>
+          <div class="chips"><span class="chip train">Pendeltåg → Arlanda C</span><span class="chip hours warn">+ збір Арланди</span></div>
+        </div>
+      </li>
+      <li class="solo-part">
+        <time>11:45</time>
+        <div class="stop">
+          <h3>В аеропорту Арланда</h3>
+          <p>Раніше за 12:00, із запасом.</p>
+        </div>
+      </li>
+    </ol>
+    <aside class="swap">
+      <h4>Якщо валізи важкі або часу мало</h4>
+      <ul>
+        <li>Таксі з Васастану до Арланди їде 35–45 хвилин. Домовтеся про фіксовану ціну ще до посадки.</li>
+        <li>Arlanda Express від Центрального вокзалу їде 18 хвилин і має знижку для пенсіонерів, але спершу треба дістатися до вокзалу.</li>
+      </ul>
+    </aside>
+  </section>
+
+  <!-- ГОДИНИ -->
+  <section class="ref" id="hours">
+    <h2>Години роботи, перевірені</h2>
+    <p>Перевірено 5 жовтня для днів цього плану. Палац можуть зачинити без попередження через королівські заходи, тож у середу вранці перевіримо його сайт.</p>
+    <div class="table-scroll">
+      <table>
+        <thead>
+          <tr><th>Місце</th><th>День</th><th>Години цього дня</th><th>Примітка</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Скансен</td><td><span class="day-pill">Ср</span></td><td class="h">10:00–15:00</td><td>Будні з жовтня до грудня. Вихідні 10–16.</td></tr>
+          <tr><td>Королівський палац</td><td><span class="day-pill">Ср</span></td><td class="h">10:00–16:00</td><td>Щодня в жовтні. Єдине закриття — під час державного візиту 18–21 жовтня.</td></tr>
+          <tr><td>Кораблик SL, лінія 82</td><td><span class="day-pill">Ср</span></td><td class="h">~07:20–00:00</td><td>Цілий рік, приблизно кожні 15 хв. Квиток SL діє.</td></tr>
+          <tr><td>Skeppsbro Bageri</td><td><span class="day-pill">Ср</span></td><td class="h">07:00–18:00</td><td>Вихідні 08–18.</td></tr>
+          <tr><td>Hermans</td><td><span class="day-pill">Ср</span></td><td class="h">11:00–20:00</td><td>Дані зі старіших джерел. Варто уточнити.</td></tr>
+          <tr><td>Музей Васа</td><td><span class="day-pill">Чт</span></td><td class="h">10:00–17:00</td><td>По середах до 20:00 (вересень–травень).</td></tr>
+          <tr><td>Hötorgshallen</td><td><span class="day-pill">Чт</span></td><td class="h">10:00–18/19</td><td>У неділю зачинено. Деякі прилавки закриваються раніше.</td></tr>
+          <tr><td>Hemköp Stockholm City</td><td><span class="day-pill">Чт</span></td><td class="h">07:00–23:00</td><td>Гарячий шведський стіл і салат-бар.</td></tr>
+          <tr><td>Музей Нобелівської премії</td><td><span class="day-pill">Чт</span></td><td class="h">11:00–17:00</td><td>5–12 жовтня щодня транслює оголошення премій. У понеділок зачинено.</td></tr>
+          <tr><td>Ратуша</td><td><span class="day-pill">Чт</span></td><td class="h">Екскурсії 10–15</td><td>Англійською щогодини. Вежа зачинена.</td></tr>
+          <tr><td>Національний музей</td><td><span class="day-pill">Чт</span></td><td class="h">11:00–20:00</td><td>У четвер з 17 до 20 вхід вільний. Інші дні 11–17, у понеділок зачинено.</td></tr>
+          <tr><td>Svedjan Bageri</td><td><span class="day-pill">Чт</span></td><td class="h">07:30–18:00</td><td>Вихідні 09–16.</td></tr>
+          <tr><td>Tabbouli Södermalm</td><td><span class="day-pill">Чт</span></td><td class="h">17:00–23:00</td><td>Краще забронювати.</td></tr>
+          <tr><td>Lillebrors Bageri</td><td><span class="day-pill">Пт</span></td><td class="h">з 07:30/08:00</td><td>Джерела розходяться щодо годин, але о 10:15 точно відчинено.</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- ІДЕЇ -->
+  <section class="ref" id="ideas">
+    <h2>Ще ідеї</h2>
+    <p>Якщо з’явиться вільна година, піде дощ або зміняться плани.</p>
+    <div class="ideas">
+      <div>
+        <h3>Їжа</h3>
+        <ul>
+          <li><strong>Restaurant Aubergine</strong><span>Linnégatan 38, район Östermalm. Середземноморський ресторан із промовистою назвою («Баклажан»). Варто перевірити актуальне меню.</span></li>
+          <li><strong>Östermalms Saluhall</strong><span>Ще один великий критий ринок, відреставрована цегляна будівля 1888 року на площі Östermalmstorg. Гарно подивитися й перекусити. Години не перевірені.</span></li>
+          <li><strong>Обід із супермаркету</strong><span>Hemköp Stockholm City (запасний варіант на четвер) — найзручніший шведський стіл у центрі.</span></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Що подивитися</h3>
+        <ul>
+          <li><strong>Станція метро Solna Centrum</strong><span>Одна зупинка від Västra skogen синьою лінією. Розписана як червоне небо над зеленим лісом.</span></li>
+          <li><strong>Monteliusvägen</strong><span>Стежка над скелею біля Skinnarviksberget з видом просто на Ратушу.</span></li>
+          <li><strong>Зміна варти</strong><span>О 12:15 з понеділка по суботу в зовнішньому дворі палацу, близько 40 хвилин, безкоштовно.</span></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Квитки</h3>
+        <ul>
+          <li><strong>72-годинний квиток SL</strong><span>360 крон для дорослих, а для людей від 65 років дешевше, за пільговим тарифом. Покриває все в цьому плані, крім збору Арланди.</span></li>
+          <li><strong>Збір за Арланду</strong><span>Близько 150 крон із дорослого за приміський поїзд до Arlanda C. Купується в застосунку SL.</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="sources">
+      Джерела:
+      <ul>
+        <li><a href="https://www.skansen.se/en/plan-your-visit/opening-hours-and-prices/">Скансен: години роботи</a></li>
+        <li><a href="https://www.kungligaslotten.se/vara-besoksmal/kungliga-slottet/oppettider.html">Королівський палац: години роботи</a></li>
+        <li><a href="https://www.vasamuseet.se/en">Музей Васа</a></li>
+        <li><a href="https://www.nobelprize.org/prizes/about/prize-announcement-dates/">Дати оголошення Нобелівських премій 2026</a></li>
+        <li><a href="https://www.nobelprizemuseum.se/en/plan-your-visit/opening-hours/">Музей Нобелівської премії: години</a> · <a href="https://www.nobelprizemuseum.se/en/event/live-streams-this-years-nobel-prizes/">трансляції</a></li>
+        <li><a href="https://www.nationalmuseum.se/en/thursday-evenings-at-nationalmuseum">Національний музей: вечори четверга</a></li>
+        <li><a href="https://stadshuset.stockholm/en/visit-stockholm-city-hall/guided-tours/">Ратуша: екскурсії</a> · <a href="https://stadshuset.stockholm/en/visit-stockholm-city-hall/city-hall-tower">вежа</a></li>
+        <li><a href="https://www.skeppsbrobageri.com/">Skeppsbro Bageri</a> · <a href="https://thatsup.co.uk/stockholm/bakery/svedjan-bageri/">Svedjan Bageri</a> · <a href="https://visitstockholm.com/o/lillebrors-bageri">Lillebrors Bageri</a></li>
+        <li><a href="https://thatsup.co.uk/stockholm/restaurant/hotorgshallen">Hötorgshallen</a> · <a href="https://www.hemkop.se/butik/4297">Hemköp Stockholm City</a></li>
+        <li><a href="https://tabbouli.eu/en/our-restaurants/soder/">Tabbouli Södermalm</a> · <a href="https://stockholmonashoestring.com/hermans-vegetarian-buffet/">Hermans</a></li>
+        <li><a href="https://ruttdirekt.se/djurgardsfarjan/">Кораблик Djurgårdsfärjan, лінія 82</a> · <a href="https://sl.se/biljetter/sortiment-och-regler/periodbiljetter/72-timmarsbiljett">72-годинний квиток SL</a> · <a href="https://www.forsvarsmakten.se/en/news-and-events/the-royal-guard/">Королівська варта</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <footer>Час заходу сонця розраховано для центру Стокгольма. Час між пунктами враховує спокійну пішу прогулянку.</footer>
+</div>
+
+<script>
+(function () {
+  var d = new Date();
+  var iso = d.getFullYear() + "-" + String(d.getMonth() + 1).padStart(2, "0") + "-" + String(d.getDate()).padStart(2, "0");
+  var sec = document.querySelector('section.day[data-date="' + iso + '"]');
+  if (!sec) return;
+  var h2 = sec.querySelector("h2");
+  var b = document.createElement("span");
+  b.className = "today-badge";
+  b.textContent = "Сьогодні";
+  h2.appendChild(b);
+})();
+</script>
