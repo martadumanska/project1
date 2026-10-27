@@ -19,45 +19,38 @@ const run = (text, o = {}) => new TextRun({ text, ...o });
 const para = (children, o = {}) => new Paragraph({ children: [].concat(children), ...o });
 const heading = (text) => new Paragraph({
   heading: HeadingLevel.HEADING_2,
-  spacing: { before: 140, after: 40 },
+  spacing: { before: 240, after: 80 },
   children: [run(text)],
 });
 
 const line = { style: BorderStyle.SINGLE, size: 4, color: RULE };
 const none = { style: BorderStyle.NONE, size: 0, color: "FFFFFF" };
 const noBorders = { top: none, bottom: none, left: none, right: none, insideHorizontal: none, insideVertical: none };
-const cellMargins = { top: 45, bottom: 45, left: 100, right: 100 };
+const cellMargins = { top: 70, bottom: 60, left: 110, right: 110 };
 
-// --- The paradox: two questions side by side ---
-const half = Math.floor(CONTENT_W / 2) - 60;
-const gap = CONTENT_W - 2 * half;
-const questionCell = (q, sub) => new TableCell({
-  width: { size: half, type: WidthType.DXA },
-  shading: { fill: BOX, type: ShadingType.CLEAR, color: "auto" },
-  margins: { top: 90, bottom: 90, left: 140, right: 140 },
-  borders: { top: none, bottom: none, right: none, left: { style: BorderStyle.SINGLE, size: 18, color: BLUE } },
-  children: [
-    para(run(q, { bold: true, color: NAVY }), { spacing: { after: 30 } }),
-    para(run(sub, { italics: true, color: GREY, size: 20 })),
-  ],
-});
+// --- The paradox: a single teaser question under the title ---
 const paradox = new Table({
   width: { size: CONTENT_W, type: WidthType.DXA },
-  columnWidths: [half, gap, half],
+  columnWidths: [CONTENT_W],
   borders: noBorders,
   rows: [new TableRow({
-    children: [
-      questionCell("Why does a country under daily attack choose to become a security donor?", "(What drives a nation to give when it is under threat?)"),
-      new TableCell({ width: { size: gap, type: WidthType.DXA }, borders: noBorders, children: [para([])] }),
-      questionCell("How can a country in acute need contribute anything to others at all?", "(Where does the capacity come from?)"),
-    ],
+    children: [new TableCell({
+      width: { size: CONTENT_W, type: WidthType.DXA },
+      shading: { fill: BOX, type: ShadingType.CLEAR, color: "auto" },
+      margins: { top: 150, bottom: 150, left: 220, right: 220 },
+      borders: { top: none, bottom: none, right: none, left: { style: BorderStyle.SINGLE, size: 18, color: BLUE } },
+      children: [
+        para(run("THE PARADOX", { bold: true, color: BLUE, size: 18, characterSpacing: 20 }), { spacing: { after: 40 } }),
+        para(run("Why \u2014 and how \u2014 does a country under daily attack become a security donor?", { bold: true, color: NAVY, size: 26 }), { spacing: { after: 0 } }),
+      ],
+    })],
   })],
 });
 
 // --- Programme ---
 const COLS = [1150, 6196, 2400];
 const PROGRAMME = [
-  ["10 min", "Recap from Seminar 1 + The Paradox", "Key findings from the first seminar and the two questions that frame the discussion ahead.", "Prof. Olesya Hulchiy"],
+  ["10 min", "Recap from Seminar 1 + The Paradox", "Key findings from the first seminar and the paradox that frames the discussion ahead.", "Prof. Olesya Hulchiy"],
   ["20 min", "Ukraine from the inside: what the system looks like under pressure", "Three perspectives in one narrative: clinician, administrator, academic. What the health system goes through during war — and what that experience looks like from the outside.", "Prof. Serhiy Dubrov"],
   ["20 min", "From emergency response to health diplomacy: a regional perspective", null, "Prof. Dorit Nitzan"],
   ["10 min", "Looking ahead: questions on the horizon for academic health diplomacy", "A youth perspective — her own path into the field, the work of the Youth Council, and what international cooperation looks like from where she stands.", "Natalia Pidmurniak"],
@@ -139,7 +132,7 @@ const doc = new Document({
   creator: "Health Bridge",
   title: "Seminar 2 agenda – From Crisis to Contribution",
   styles: {
-    default: { document: { run: { font: "Calibri", size: 22 }, paragraph: { spacing: { after: 60, line: 240, lineRule: "auto" } } } },
+    default: { document: { run: { font: "Calibri", size: 22 }, paragraph: { spacing: { after: 90, line: 259, lineRule: "auto" } } } },
     paragraphStyles: [{
       id: "Heading2", name: "Heading 2", basedOn: "Normal", next: "Normal", quickFormat: true,
       run: { font: "Calibri", size: 26, bold: true, color: BLUE },
@@ -158,17 +151,12 @@ const doc = new Document({
     children: [
       para(run("Seminar 2. From Crisis to Contribution:", { bold: true, size: 32, color: NAVY }), { alignment: AlignmentType.CENTER, spacing: { after: 0 } }),
       para(run("Ukraine’s Role in Advancing Health Diplomacy", { bold: true, size: 32, color: NAVY }), { alignment: AlignmentType.CENTER, spacing: { after: 80 } }),
-      para(run("Wednesday, 4 November 2026  ·  13:00–15:30 CET (14:00–16:30 EEST)  ·  Online seminar (Zoom)  ·  English", { color: GREY }), { alignment: AlignmentType.CENTER, spacing: { after: 120 } }),
+      para(run("Wednesday, 4 November 2026  ·  13:00–15:30 CET (14:00–16:30 EEST)  ·  Online seminar (Zoom)  ·  English", { color: GREY }), { alignment: AlignmentType.CENTER, spacing: { after: 280 } }),
+      paradox,
 
       heading("Concept"),
       para(run("The first seminar established the foundations: what health diplomacy is and why it matters for the region. This seminar takes a step further — from concept to agency.")),
       para(run("Ukraine is generating knowledge that exists nowhere else: in health system resilience under pressure, crisis management, and academic continuity during conflict. The seminar aims to make this knowledge visible and legible to an international audience — and to examine the role of academic partnerships as an instrument of diplomacy.")),
-
-      heading("The Paradox"),
-      para(run("During Seminar 1, a question was raised that remained unanswered. Prof. Hulchiy will open this seminar by returning to it — as a recap of what was discussed and as a frame for what follows.")),
-      para(run("This seminar is built around a paradox — or perhaps two sides of the same question:", { italics: true }), { spacing: { after: 100 } }),
-      paradox,
-      para(run("You don’t have to choose one. But by the end of today, we hope you’ll have your own answer.", { italics: true }), { spacing: { before: 100, after: 40 } }),
 
       heading("Programme"),
       programme,
