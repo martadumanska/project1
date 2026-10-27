@@ -1,5 +1,5 @@
 // Certificate for Health Bridge Seminar 2, rebuilt from the Seminar 1 draft layout.
-// Usage: node certificate.js <out.docx> [participantName] [certificateNumber]
+// Usage: node certificate.js <out.docx> [participantName]
 const fs = require("fs");
 const path = require("path");
 const {
@@ -11,7 +11,6 @@ const {
 const ROOT = path.resolve(__dirname, "..");
 const out = process.argv[2] || path.join(ROOT, "out", "certificate.docx");
 const participant = process.argv[3] || "Name Surname";
-const number = process.argv[4] || "2026/XXXXX";
 
 const BLUE = "356CA0";
 const F_TITLE = "Poppins Medium";
@@ -20,7 +19,7 @@ const F_NAME = "Barlow Semi Condensed SemiBold";
 
 const SEMINAR_LINE_1 = "For participation in the online seminar «From Crisis to Contribution:";
 const SEMINAR_LINE_2 = "Ukraine’s Role in Advancing Health Diplomacy»";
-const DATE_LINE = "4 November 2026, 2.5 hours";
+const DATE_LINE = "4 November 2026, 2 hours";
 
 const SIGNATORIES = [
   { name: "Marie HASSELBERG", lines: ["Head of Department", "Department of Global Public Health", "Karolinska Institutet"] },
@@ -157,11 +156,10 @@ const doc = new Document({
     children: [
       logoRow,
       centered("CERTIFICATE", { font: F_TITLE, size: 100, before: 1200, line: 1240 }),
-      centered(number, { size: 36, before: 260 }),
-      centered(SEMINAR_LINE_1, { size: 24, before: 420, line: 420 }),
+      centered(SEMINAR_LINE_1, { size: 24, before: 760, line: 420 }),
       centered(SEMINAR_LINE_2, { size: 24, line: 420 }),
-      centered(participant, { font: F_NAME, size: 52, before: 560, line: 720 }),
-      new Paragraph({ spacing: { before: 0, line: 1100, lineRule: "exact" }, children: [] }),
+      centered(participant, { font: F_NAME, size: 52, before: 700, line: 720 }),
+      new Paragraph({ spacing: { before: 0, line: 1350, lineRule: "exact" }, children: [] }),
       signatures,
     ],
   }],
