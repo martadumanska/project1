@@ -10,9 +10,9 @@ Fill in the three placeholders in [square brackets] before sending: the form lin
 
 Dear participants,
 
-We are very excited to welcome you to the second Health Bridge seminar, **“From Crisis to Contribution: Ukraine’s Role in Advancing Health Diplomacy”**, on **Wednesday, 4 November, 13:00–15:30 CET (14:00–16:30 EEST)** on Zoom.
+We are very excited to welcome you to the second Health Bridge online seminar, **“From Crisis to Contribution: Ukraine’s Role in Advancing Health Diplomacy”**, on **Wednesday, 4 November, 13:00–15:30 CET (14:00–16:30 EEST)** on Zoom.
 
-Please find the agenda attached. Prof. Olesya Hulchiy will open with a short recap of Seminar 1. We will then hear from Prof. Serhiy Dubrov, Prof. Dorit Nitzan and Natalya Pidmurniak. After the talks, we have set aside a longer moderated discussion of around 45–50 minutes with all the speakers. This is the heart of the seminar.
+Please find the agenda attached. Prof. Olesya Hulchiy, who will moderate the seminar, will open with a short recap of Seminar 1. We will then hear from Prof. Serhiy Dubrov, Prof. Dorit Nitzan and Natalia Pidmurniak. After the talks, we have set aside a longer discussion of around 45–50 minutes with all the speakers, moderated by Prof. Hulchiy. This is the heart of the seminar.
 
 We would like you to shape that discussion. The seminar is built around a paradox: *why does a country under daily attack choose to become a security donor, and how can a country in acute need contribute anything to others at all?* What would you like to ask the speakers? Which questions about health diplomacy, crisis response or academic partnerships would you like us to explore together?
 
@@ -40,7 +40,7 @@ Build it in Microsoft Forms, like the registration form: **New Form**, then past
 **Form title:** Your questions for Seminar 2 – From Crisis to Contribution
 
 **Form description:**
-On 4 November, around 45–50 minutes of the seminar are set aside for an open discussion with the speakers: Prof. Serhiy Dubrov, Prof. Dorit Nitzan and Natalya Pidmurniak. Help us shape it by sharing the questions you would most like to discuss. We will group them into 2–3 focus questions for the panel. Please respond by Monday, 2 November.
+On 4 November, around 45–50 minutes of the online seminar are set aside for an open discussion with the speakers: Prof. Serhiy Dubrov, Prof. Dorit Nitzan and Natalia Pidmurniak. Help us shape it by sharing the questions you would most like to discuss. We will group them into 2–3 focus questions for the panel. Please respond by Monday, 2 November.
 
 ### Questions
 
@@ -52,7 +52,7 @@ Subtitle: *You can ask more than one question. Questions to a specific speaker a
 Type: Choice, *Multiple answers* on. Optional.
 - Prof. Serhiy Dubrov – Ukraine from the inside: the health system under pressure
 - Prof. Dorit Nitzan – From emergency response to health diplomacy
-- Natalya Pidmurniak – A youth perspective on international cooperation
+- Natalia Pidmurniak – A youth perspective on international cooperation
 - All speakers / the panel as a whole
 
 **3. The seminar is built around a paradox. Which side would you most like to explore?**
@@ -79,4 +79,4 @@ Type: Text, *Short answer*. Optional.
 
 ### After the deadline
 
-Open **Responses** and click **Open results in Excel**. Questions 2 and 3 let you sort by speaker and by side of the paradox, which makes it quick to cluster the submissions into the 2–3 focus questions for the moderator.
+Open **Responses** and click **Open results in Excel**. Questions 2 and 3 let you sort by speaker and by side of the paradox, which makes it quick to cluster the submissions into the 2–3 focus questions for Prof. Hulchiy as moderator.

@@ -18,7 +18,7 @@ const F_TITLE = "Poppins Medium";
 const F_TEXT = "Poppins Light";
 const F_NAME = "Barlow Semi Condensed SemiBold";
 
-const SEMINAR_LINE_1 = "For participation in the seminar «From Crisis to Contribution:";
+const SEMINAR_LINE_1 = "For participation in the online seminar «From Crisis to Contribution:";
 const SEMINAR_LINE_2 = "Ukraine’s Role in Advancing Health Diplomacy»";
 const DATE_LINE = "4 November 2026, 2.5 hours";
 
@@ -26,7 +26,7 @@ const SIGNATORIES = [
   { name: "Marie HASSELBERG", lines: ["Head of Department", "Department of Global Public Health", "Karolinska Institutet"] },
   { name: "Serhiy DUBROV", lines: ["Director General", "Kyiv City Clinical Hospital No. 12"] },
   { name: "Dorit NITZAN", lines: ["Director, School of Public Health", "Ben-Gurion University of the Negev"] },
-  { name: "Natalya PIDMURNIAK", lines: ["Member, Youth Council", "Ministry of Health of Ukraine"] },
+  { name: "Natalia PIDMURNIAK", lines: ["Member, Youth Council", "Ministry of Health of Ukraine"] },
 ];
 
 const img = (f) => fs.readFileSync(path.join(ROOT, f));

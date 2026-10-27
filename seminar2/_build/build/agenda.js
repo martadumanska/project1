@@ -60,9 +60,9 @@ const PROGRAMME = [
   ["10 min", "Recap from Seminar 1 + The Paradox", "Key findings from the first seminar and the two questions that frame the discussion ahead.", "Prof. Olesya Hulchiy"],
   ["20 min", "Ukraine from the inside: what the system looks like under pressure", "Three perspectives in one narrative: clinician, administrator, academic. What the health system goes through during war — and what that experience looks like from the outside.", "Prof. Serhiy Dubrov"],
   ["20 min", "From emergency response to health diplomacy: a regional perspective", null, "Prof. Dorit Nitzan"],
-  ["10 min", "Looking ahead: questions on the horizon for academic health diplomacy", "A youth perspective — her own path into the field, the work of the Youth Council, and what international cooperation looks like from where she stands.", "Natalya Pidmurniak"],
-  ["45–50 min", "Panel discussion", "Moderated discussion around 2–3 focus questions, drawn from participants’ questions submitted in advance. Speakers + floor.", "All speakers + participants"],
-  ["5–10 min", "Closing", "Key takeaways. Next steps within Health Bridge.", "Moderator"],
+  ["10 min", "Looking ahead: questions on the horizon for academic health diplomacy", "A youth perspective — her own path into the field, the work of the Youth Council, and what international cooperation looks like from where she stands.", "Natalia Pidmurniak"],
+  ["45–50 min", "Panel discussion", "Moderated by Prof. Olesya Hulchiy around 2–3 focus questions, drawn from participants’ questions submitted in advance. Speakers + floor.", "All speakers + participants"],
+  ["5–10 min", "Closing", "Key takeaways. Next steps within Health Bridge.", "Prof. Olesya Hulchiy"],
 ];
 const tcell = (w, children, fill) => new TableCell({
   width: { size: w, type: WidthType.DXA },
@@ -158,7 +158,7 @@ const doc = new Document({
     children: [
       para(run("Seminar 2. From Crisis to Contribution:", { bold: true, size: 32, color: NAVY }), { alignment: AlignmentType.CENTER, spacing: { after: 0 } }),
       para(run("Ukraine’s Role in Advancing Health Diplomacy", { bold: true, size: 32, color: NAVY }), { alignment: AlignmentType.CENTER, spacing: { after: 80 } }),
-      para(run("Wednesday, 4 November 2026  ·  13:00–15:30 CET (14:00–16:30 EEST)  ·  Online (Zoom)  ·  English", { color: GREY }), { alignment: AlignmentType.CENTER, spacing: { after: 120 } }),
+      para(run("Wednesday, 4 November 2026  ·  13:00–15:30 CET (14:00–16:30 EEST)  ·  Online seminar (Zoom)  ·  English", { color: GREY }), { alignment: AlignmentType.CENTER, spacing: { after: 120 } }),
 
       heading("Concept"),
       para(run("The first seminar established the foundations: what health diplomacy is and why it matters for the region. This seminar takes a step further — from concept to agency.")),
