@@ -200,6 +200,46 @@ Naming these organisations as associate partners in the Sida full proposal costs
 | Enabler | International humanitarian NGO active in more than one country (e.g., Project HOPE, Americares, Direct Relief; none verified) | International | Lead applicant for the NNF humanitarian call | Unlocks DKK 1–5M in philanthropic funding | Not verified | [NNF](https://novonordiskfonden.dk/en/grant/informing-humanitarian-response-through-research-learning-and-innovation/) |
 | Enabler | One more EU or associated-country university (e.g., in a LUKE country such as Finland, Estonia or Poland) | EU | Third-country partner | Meets the three-country minimum for OHAMR and LUKE and the multi-country minima of MSCA and CBHE (MSCA and CBHE minima not verified) | None identified yet | [NIHR on OHAMR rules](https://www.nihr.ac.uk/funding/horizon-europe-european-partnership-one-health-antimicrobial-resistance-joint-transnational-call-2026/97504) |
 
+## If the budget and timeline can change
+
+Most funders above were ruled out by the concept note's fixed shape: SEK 13.9 million, 24 months, starting January 2027. The team has since said that budget and timeline can be adjusted. That changes the picture in three ways. Figures carry the same "verify before use" status. The facts added in this section come from follow-up searches on 28 October 2026 and are cited inline.
+
+**A later start opens a second hub, but only if the team applies in the next four months.** The strongest alternative to Sida is **Erasmus+ Capacity Building in Higher Education (CBHE)**.
+
+- **Timing:** the last call under the current programme is expected in mid-November 2026, with a deadline expected in early February 2027 ([TU Dresden notice](https://tu-dresden.de/forschung-transfer/services-fuer-forschende/european-project-center/news/2026-10-13-erasmus-call-2027-restriktionen); [TU Dresden factsheet](https://tu-dresden.de/forschung-transfer/services-fuer-forschende/european-project-center/ressourcen/dateien/dokumente/erasmus-factsheet)).
+- **Size:** in 2025, Strand 2 projects received €400,000–800,000 ([University of Montenegro](https://www.ucg.ac.me/skladiste/blog_616807/objava_191607/fajlovi/CBHE%20-%20requirements%20for%20submission%20of%20project%20proposals.pdf)). Strand 3 received €0.6–1 million over 36–48 months in 2026.
+- **Coverage:** the curriculum assessment, continuing professional development, the doctoral pathway and partnership building, with Ukrainian universities paid directly.
+- **Consortium:** it needs higher-education institutions from at least two EU or associated countries, so a university outside Sweden must join Uppsala and KI.
+
+Projects from this round would start around late 2027.
+
+Because 2027 is the last call year of the current EU programmes, and FP10 money is unlikely before mid-2028, a later start in practice means **applying between now and April 2027 for a start in late 2027 or early 2028**. Pushing the start further, to mid-2028, lands in the gap between the two EU budgets.
+
+**A smaller or phased budget fits the funders that actually exist.** Almost every remaining funder pays €0.1–1 million per grant. Splitting the project by workstream gives this map:
+
+| Workstream | Best fit once timing is flexible | Size | Earliest start | Who must lead |
+|---|---|---|---|---|
+| WS1 Partnership formation | SIUCP 2027 preparation or project grant. No 2027 call yet; the programme sits under the Ukraine strategy that ends in December 2027, so 2027 may be its last round ([SI](https://si.se/en/apply/funding-grants/si-ukraine-cooperation-programme-2)) | SEK 0.1–2M | 2027 | Swedish organisation |
+| WS2 Course evaluation and nurse-led improvement projects | NNF humanitarian research call, if it recurs. Past deadlines were 18 Apr 2024 and 16 Apr 2025, and no 2026 round was found ([NNF 2024 guidelines](https://novonordiskfonden.dk//app/uploads/Guidelines-for-Open-Humanitarian-Call-2024-1.pdf)). OHAMR 2027 is an option if its call text (18 Nov) accepts hospital IPC under "stop transmission". Klinikpartnerschaften could fund the Ternopil hospital strand | DKK 1–5M (NNF) | Autumn 2027 (NNF); 2028 (OHAMR) | International humanitarian NGO (NNF); national rules (OHAMR); German organisation (Klinikpartnerschaften) |
+| WS3 Nursing curriculum assessment | Erasmus+ CBHE; Nansen EDU, if Norway repeats it | €0.4–1M over 36–48 months | Late 2027 | University consortium |
+| WS4 Systems synthesis, gender and policy | RJ Projects 2027 (window predicted for January 2027); International Renaissance Foundation for Ukrainian policy dialogue | Up to 3 years (RJ) | 2028 (RJ) | Swedish-based researcher (RJ); Ukrainian organisation (IRF) |
+| WS5 Doctoral pathways and research capacity | MSCA Staff Exchanges (15 Apr 2027): €5,170 per person-month in 2027 per a secondary source, up to 360 person-months over 4 years ([NCP slides](https://ufukavrupa.org.tr/sites/default/files/users/user390/Burcu%20-%20Tugba%20-%20SE-%20CITIZENS%20-%20COFUND_son.son_.son_.versiyon-pdf.pdf)). Also the VR Ukraine infection-area grant, if repeated; NRFU spring 2027 calls for the Ukrainian side; ERA Chairs (14 Sep 2027) | Mobility costs only (MSCA); SEK 2M (VR) | Early 2028 (MSCA) | Any eligible beneficiary (MSCA); Swedish host (VR); Ukrainian institution (NRFU) |
+
+**A longer, phased project is also a better story for funders.** It turns one bid into a programme that bridges the December 2027 cliff.
+
+- **Phase 0, now to late 2027 (bridge).** Collect baseline data on the September–December 2026 course cohort now. If the research starts later without it, WS2 loses the before-and-after design that makes it strong. Possible funding: internal Uppsala or KI money, or the evaluation budget of the existing Sida education grant, if its terms allow. Use an SIUCP 2027 grant for partnership formation and to design the doctoral pathway.
+- **Phase 1, late 2027 or early 2028 to 2030–31.** Make CBHE the hub for WS3, WS5 and the continuing partnership. Add MSCA Staff Exchanges for the Swedish study exchange and researcher secondments, and a research core of roughly €0.3–0.7 million for WS2 and WS4 from NNF, RJ or OHAMR. Ukrainian partners lead NRFU bids for a Ukrainian-funded strand.
+- **Phase 2, 2029 onward (scale-up).** Options: an ICARS project led by the Ministry of Health, EU4Health or FP10, and Sida's successor Ukraine strategy.
+
+**The trade-offs need managing.**
+
+- **Education money is not research money.** CBHE and MSCA fund capacity and mobility, not research as such. The evaluation (WS2) and systems synthesis (WS4) still need a research funder, so keep a small research core.
+- **The Ukrainian share changes with the funder.** CBHE and MSCA pay Ukrainian partners directly. OHAMR may not pay them at all, since no Ukrainian funder is confirmed. NRFU pays only the Ukrainian side.
+- **Application caps.** In 2026, Erasmus+ allowed at most two CBHE applications per coordinator ([Lovguiden](https://www.lovguiden.dk/en/det-offentlige/eacea-uddannelse-audiovisuel-og-kultur/2025-12-18-erasmus-cbhe-2026-information-om-tilskud-til-videregaaende-uddannelse)). A TU Dresden notice of 13 October 2026 reports a limit of two KA2 applications per organisation in the 2027 call ([TU Dresden](https://tu-dresden.de/forschung-transfer/services-fuer-forschende/european-project-center/news/2026-10-13-erasmus-call-2027-restriktionen)); it is unclear whether this is an EU or an internal rule. Reserve a slot with Uppsala's grants office early.
+- **The MSCA cross-sector rule.** Sweden and Ukraine are both inside Horizon Europe as Member State and Associated Country. Secondments between them therefore have to cross sectors: hospital, ZDOROVI or Nursing Association staff go to Uppsala or KI, or Uppsala and KI researchers go to them. An academic-to-academic secondment, such as Bogomolets to KI, would likely not qualify (background knowledge; verify in the 2027 work programme).
+
+**If Sida invites a full proposal,** ask whether budget and duration may differ from the concept note; the call allows SEK 8–14 million over 18–24 months. A slimmer Sida core focused on WS2 and WS4 (around SEK 8–10 million), with WS3 and WS5 moved to CBHE and MSCA, would reduce dependence on one funder and show co-funding. Only make this change if Sida confirms it is allowed (contact: callforsk2026@sida.se, per [SweDev](https://swedev.dev/sida-call-for-concept-notes-health-and-srhr-research-partnerships-in-lmics-and-ukraine/)).
+
 ## Act on four November dates, then build for 2027
 
 The calendar has a clear logic. The next seven weeks are about the Sida full proposal, quick go/no-go decisions on the few open calls, and forming EU consortia before the Erasmus+ and OHAMR deadlines in February. The first quarter of 2027 carries the heaviest submission load. Later in 2027 the work shifts to the follow-on, because the major Swedish and Nordic programmes in the field (AMR Contain, Norway's health agreement and Sweden's Ukraine strategy) and the EU's 2021–2027 programmes all end around December 2027. All dates below inherit the "verify before use" status of the opportunity table.
@@ -209,6 +249,8 @@ The calendar has a clear logic. The next seven weeks are about the Sida full pro
 | **Next weeks:** now | Confirm the concept note's status with Sida; request the full-proposal timetable and the rules on overheads and partner transfers | Uppsala University / ReAct | Sida (the core) |
 | **Next weeks:** now to mid-Dec | Secure letters of support and advisory seats from Folkhälsomyndigheten (AMR Contain), Socialstyrelsen, the Centre for Nursing Development, the Public Health Center and WHO Ukraine; confirm who holds the chief nurse title | Uppsala / ReAct with the Nursing Association of Ukraine | Sida full proposal; reusable in every later bid |
 | **Next weeks:** now | Re-check every date in the opportunity table on the official pages | Uppsala and KI grants offices | All |
+| **Next weeks:** now | Collect baseline data on the Sept–Dec 2026 course cohort, whatever the funding outcome, so a later research start keeps the before-and-after design | ReAct / ZDOROVI with KI | Protects WS2 under any timeline |
+| **Next weeks:** now | Reserve an Erasmus+ 2027 CBHE coordinator slot with Uppsala's grants office (applications may be capped at two per organisation) | Uppsala | Erasmus+ CBHE |
 | **Next weeks:** by 15 Nov | Decide whether to submit a NATO SPS event proposal (e.g., an Advanced Training Course on IPC in evacuation chains) | Uppsala or KI co-director with a Ukrainian co-director | NATO SPS 2027-1 |
 | **Next weeks:** by 18 Nov | Check ESCMID LMIC grant eligibility for Ukraine; if eligible, a Ukrainian IPC nurse applies | Ternopil hospital / ZDOROVI | ESCMID |
 | **Next weeks:** by 24 Nov | MSCA Doctoral Networks: join an existing network only if one fits; otherwise plan for the Nov 2027 round | KI / Uppsala | MSCA |
