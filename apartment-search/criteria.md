@@ -12,6 +12,7 @@ and the next run follows the new version.
 | Move-in | **On or before 31 Jan 2027.** Anything starting later is dropped. |
 | Status | Must look active. A listing whose move-in date is already past is dropped unless it says the date is flexible. |
 | Not a swap | Drop swap-only listings ("bytesbostad", "byte", "lägenhetsbyte"): they need you to already have a rental to swap. |
+| Fresh | Drop a listing if its rental period is already over, or if it was published more than ~60 days ago with no 2027 dates. Samtrygg, Hyreskollen and Bofrid keep old ads online for years. |
 
 ## Preferences (used for ranking)
 

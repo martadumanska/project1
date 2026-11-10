@@ -1,31 +1,31 @@
 first_seen,source,address,area,type,size_m2,rent_sek,move_in,lease_end,tier,score,url,status
 2026-11-10,Qasa,Vasavägen,Solna,apartment,18,7994,2027-01-01,open-ended,A,92,https://qasa.com/se/sv/find-home?homeTypes=apartment&searchAreas=Solna_kommun%7E%7Ese,new
-2026-11-10,Qasa,Diktarvägen,Solna,apartment,25,11441,2027-01-01,2027-06-30,A,83,https://qasa.com/se/sv/find-home?homeTypes=apartment&searchAreas=Solna_kommun%7E%7Ese,new
-2026-11-10,Qasa,Armégatan,Solna,apartment,20,8846,2027-01-01,2027-05-31,A,83,https://qasa.com/se/sv/find-home?homeTypes=apartment&searchAreas=Solna_kommun%7E%7Ese,new
+2026-11-10,Qasa,Diktarvägen,Solna,apartment,25,11441,2027-01-01,2027-06-30,A,83,https://qasa.com/se/sv/find-home?homeTypes=apartment&searchAreas=R%C3%A5sunda%7E%7Ese,new
+2026-11-10,Qasa,Armégatan,Solna,apartment,20,8846,2027-01-01,2027-05-31,A,83,https://qasa.com/se/sv/find-home?homeTypes=apartment&searchAreas=R%C3%A5sunda%7E%7Ese,new
 2026-11-10,BostadsPortal,Hagalundsgatan,Solna,apartment,33,6572,2026-12-01,,A,76,https://bostadsportal.se/hyra-l%C3%A4genhet/solna/33m2-1-rok-id-6747116,new
 2026-11-10,Bofrid,Ekensbergsvägen 96,Solna,apartment,41,10000,,,A,69,https://bofrid.se/hyra-bostad/stockholms-lan/solna/solna-centrum,new
 2026-11-10,Bofrid,Skvadronsbacken 32,Sundbyberg (Rissne),apartment,60,12000,asap,,B,55,https://bofrid.se/hyra-lagenhet/stockholms-lan/sundbyberg/rissne/skvadronsbacken-32-2a-60kvm-lagenhet-535258,new
 2026-11-10,Qasa,Hannebergsgatan,Solna,room,13,6886,2027-01-16,open-ended,A,93,https://qasa.com/se/sv/find-home?searchAreas=Solna_kommun%7E%7Ese,new
 2026-11-10,Qasa,Gustav III:s Boulevard,Solna,room,16,6357,2027-01-01,open-ended,A,88,https://qasa.com/se/sv/find-home?searchAreas=Solna_kommun%7E%7Ese,new
-2026-11-10,Qasa,Roslagsgatan,Vasastan,room,17,5827,2027-01-01,open-ended,A,88,https://qasa.com/se/sv/find-home?searchAreas=Norrmalm%7EStockholm%7Ese,new
+2026-11-10,Qasa,Roslagsgatan,Vasastan,room,17,5827,2027-01-01,open-ended,A,88,https://qasa.com/se/sv/find-home?searchAreas=Stockholm%7E%7Ese,new
 2026-11-10,Qasa,Erik Sandbergs gata,Solna,room,15,6886,2027-01-01,2027-05-31,A,79,https://qasa.com/se/sv/find-home?searchAreas=Solna_kommun%7E%7Ese,new
 2026-11-10,Qasa,Marieberg,Kungsholmen,room,20,6357,2026-12-01,,A,81,https://qasa.com/se/sv/find-home?searchAreas=Kungsholmen%7EStockholm%7Ese,new
 2026-11-10,Samtrygg,Alphyddevägen 9,Solna,apartment,,12650,,open-ended,A,over-budget,https://www.samtrygg.se/object/28rkhwtctevwp1cljshp/stockholm/solna/alphyddevagen-9/1-rok,over-budget
 2026-11-10,Qasa,Ursviksvägen,Sundbyberg,apartment,38,12714,2027-01-01,open-ended,B,over-budget,https://qasa.com/se/sv/find-home?homeTypes=apartment&searchAreas=Sundbybergs_kommun%7E%7Ese,over-budget
 2026-11-10,Qasa,Mejerskans Gata 4,Knivsta,apartment,43,7928,2027-01-01,open-ended,D,60,https://qasa.com/se/sv/find-home?homeTypes=apartment&searchAreas=knivsta%7E%7Ese,new (verify not swap-only)
-2026-11-10,Bofrid,Karolinska Vägen 1A,Solna (Norra Hagastaden),apartment,29,6500,,<1 year,A,73,https://bofrid.se/en/rent-apartment/sweden/stockholms-lan/solna/norra-hagastaden/karolinska-vagen-1a-29kvm-lagenhet-2511281450,new (likely stale)
-2026-11-10,Samtrygg,Humblegatan 17,Sundbyberg,apartment,,6900,,open-ended,B,72,https://www.samtrygg.se/object/fww5dqubnozivjzty2wf/stockholm/sundbyberg/humblegatan-17/1-rok,new (likely stale)
-2026-11-10,Samtrygg,Råsundavägen 134,Solna,apartment,,10925,,12 months,A,70,https://www.samtrygg.se/object/b7zjavnfkdqhzgad90j5/stockholm/solna/rasundavagen-134/1-rok,new
-2026-11-10,Hyreskollen,Sylvangatan,Solna,apartment,29,9083,,,A,69,https://hyreskollen.se/Solna_kommun/Solna/Sylvangatan/6_eBYE,new
+2026-11-10,Bofrid,Karolinska Vägen 1A,Solna (Norra Hagastaden),apartment,29,6500,,<1 year,A,,https://bofrid.se/en/rent-apartment/sweden/stockholms-lan/solna/norra-hagastaden/karolinska-vagen-1a-29kvm-lagenhet-2511281450,"removed (posted 2025, ends 2026-11-28)"
+2026-11-10,Samtrygg,Humblegatan 17,Sundbyberg,apartment,,6900,,open-ended,B,,https://www.samtrygg.se/object/fww5dqubnozivjzty2wf/stockholm/sundbyberg/humblegatan-17/1-rok,"removed (ad from 2024, stale)"
+2026-11-10,Samtrygg,Råsundavägen 134,Solna,apartment,,10925,,12 months,A,,https://www.samtrygg.se/object/b7zjavnfkdqhzgad90j5/stockholm/solna/rasundavagen-134/1-rok,"removed (lease 2021-22, stale)"
+2026-11-10,Hyreskollen,Sylvangatan,Solna,apartment,29,9083,,,A,,https://hyreskollen.se/Solna_kommun/Solna/Sylvangatan/6_eBYE,"removed (published 2026-01, stale)"
 2026-11-10,Homii,Huvudsta (street not stated),Solna (Huvudsta),apartment,44,11000,2027-01-01,2027-02-28,A,78,https://homii.se/soka-bostad/solna,new
-2026-11-10,boio,Norrtullsgatan 18,Vasastan,apartment,42,11500,,,A,65,https://boio.se/objekt/vasastan-hyra,new
+2026-11-10,boio,Norrtullsgatan 18,Vasastan,apartment,42,11500,,,A,,https://boio.se/objekt/vasastan-hyra,"removed (listing not found, bad link)"
 2026-11-10,Bofrid,Skvadronsbacken 32,Sundbyberg (Rissne),apartment,60,12000,2027-01-01,,B,65,https://bofrid.se/hyra-lagenhet/stockholms-lan/sundbyberg/rissne/skvadronsbacken-32-2a-60kvm-lagenhet-535258,updated (date)
-2026-11-10,Hyreskollen,Solnavägen,Solna,apartment,22,11500,,,A,62,https://hyreskollen.se/Solna_kommun/Solna/Solnav%C3%A4gen/_XFqn,new
+2026-11-10,Hyreskollen,Solnavägen,Solna,apartment,22,11500,,,A,,https://hyreskollen.se/Solna_kommun/Solna/Solnav%C3%A4gen/_XFqn,"removed (published 2025-07, stale)"
 2026-11-10,Qasa,Bredkilsbacken,Solna,room,14,6886,2027-01-01,open-ended,A,88,https://qasa.com/se/sv/find-home?searchAreas=Solna_kommun%7E%7Ese,new
 2026-11-10,Qasa,Hagalundsgatan,Solna,room,20,4767,2027-01-01,open-ended,A,88,https://qasa.com/se/sv/find-home?searchAreas=Solna_kommun%7E%7Ese,new
 2026-11-10,Qasa,Lundagatan,Solna? (confirm),room,8,5297,2027-01-01,open-ended,A,88,https://qasa.com/se/sv/find-home?searchAreas=Solna_kommun%7E%7Ese,new
 2026-11-10,Samtrygg,Stamgårdsparken 4,Sundbyberg,apartment,,12276,,13 months,B,over-budget,https://www.samtrygg.se/object/h1bezaqytbk334emshib/stockholm/sundbyberg/stamgardsparken-4/1-rok,over-budget
-2026-11-10,Samtrygg,Humblegatan 18B,Sundbyberg,apartment,,12535,,open-ended,B,over-budget,https://www.samtrygg.se/RentalObject/Show/3jTgNTiZ64wopmTcG2eJ,over-budget
+2026-11-10,Samtrygg,Humblegatan 18B,Sundbyberg,apartment,,12535,,open-ended,B,over-budget,https://www.samtrygg.se/RentalObject/Show/3jTgNTiZ64wopmTcG2eJ,"removed (ad from 2024, stale)"
 2026-11-10,Samtrygg,Kungsholms strand 143,Kungsholmen,apartment,30,12650,,6 months,A,over-budget,https://www.samtrygg.se/RentalObject/Show/BqMo2oXOIpfC7XRa6ejD,over-budget
 2026-11-10,Qasa,Tellusvägen,Sollentuna,apartment,30,11654,2027-02-01,,C,date-miss,https://qasa.com/se/sv/find-home?homeTypes=apartment&searchAreas=Sollentuna_kommun%7E%7Ese,date-miss
 2026-11-10,Qasa,Lidängsgatan 4,Knivsta,apartment,26,7083,2027-02-01,,D,date-miss,https://qasa.com/se/sv/find-home?homeTypes=apartment&searchAreas=knivsta%7E%7Ese,date-miss
