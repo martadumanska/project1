@@ -29,3 +29,4 @@ first_seen,source,address,area,type,size_m2,rent_sek,move_in,lease_end,tier,scor
 2026-11-10,Samtrygg,Kungsholms strand 143,Kungsholmen,apartment,30,12650,,6 months,A,over-budget,https://www.samtrygg.se/RentalObject/Show/BqMo2oXOIpfC7XRa6ejD,over-budget
 2026-11-10,Qasa,Tellusvägen,Sollentuna,apartment,30,11654,2027-02-01,,C,date-miss,https://qasa.com/se/sv/find-home?homeTypes=apartment&searchAreas=Sollentuna_kommun%7E%7Ese,date-miss
 2026-11-10,Qasa,Lidängsgatan 4,Knivsta,apartment,26,7083,2027-02-01,,D,date-miss,https://qasa.com/se/sv/find-home?homeTypes=apartment&searchAreas=knivsta%7E%7Ese,date-miss
+2026-11-10,Qasa (found by you),Sylvangatan 6,Solna (Hagalund),apartment,30,,,first-hand,A,,https://qasa.com/se/sv/home/1501017,applying (see apply-sylvangatan-6.md)
