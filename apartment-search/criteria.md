@@ -11,6 +11,7 @@ and the next run follows the new version.
 | Rent | **≤ 12,000 SEK/month**, counting the platform's tenant fee (Qasa and Samtrygg show prices with the fee included). |
 | Move-in | **On or before 31 Jan 2027.** Anything starting later is dropped. |
 | Status | Must look active. A listing whose move-in date is already past is dropped unless it says the date is flexible. |
+| Not a swap | Drop swap-only listings ("bytesbostad", "byte", "lägenhetsbyte"): they need you to already have a rental to swap. |
 
 ## Preferences (used for ranking)
 
