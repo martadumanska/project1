@@ -3,7 +3,7 @@
 A weekly automated search for a rental in Stockholm that is:
 - **≤ 12,000 SEK/month**
 - available **by 31 Jan 2027**, ideally from about 10 January
-- well connected to **Karolinska Institutet (Solna)** and **Uppsala**
+- **close to central Stockholm and Karolinska Institutet (Solna)**, ideally with a direct train to **Uppsala** (SL/UL travel is free for you, so ticket cost doesn't count)
 
 ## How it works
 - A Claude Code **scheduled task** runs **every Monday at 07:17 (Stockholm time)**. It resumes the Claude Code session where

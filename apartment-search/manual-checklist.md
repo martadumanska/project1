@@ -4,7 +4,7 @@ The weekly run covers what's searchable. The steps below fill the gaps. Most tak
 
 ## 1. Set instant alerts (do this first: good listings go within a day)
 - [ ] **Qasa**: create a profile and save searches with notifications on:
-  Solna kommun, Sundbyberg, Vasastan/Norrmalm, Kungsholmen and Sollentuna. Max rent 12,000; move-in by 31 Jan 2027.
+  Solna kommun, Vasastan/Norrmalm, Kungsholmen and Sundbyberg (plus Södermalm/Östermalm if you like). Max rent 12,000; move-in by 31 Jan 2027.
   A complete profile with a photo, a short bio, employer or university and references gets far more replies.
 - [ ] **Samtrygg**: set up a "bevakning" with the same areas and budget.
 - [ ] **Blocket Bostad**: save a search with notifications (Blocket blocks automated search).
@@ -32,12 +32,12 @@ Then:
 Fill in the `[brackets]`. Don't post your personal number or ID.
 
 **Svenska**
-> Söker lägenhet (eller rum) i Solna / Vasastan / Sundbyberg / Sollentuna från [10–31] januari 2027, gärna [X månader / tillsvidare].
+> Söker lägenhet (eller rum) i Solna / Vasastan / Kungsholmen / Sundbyberg från [10–31] januari 2027, gärna [X månader / tillsvidare].
 > Budget upp till 12 000 kr/mån. Jag är [ålder], [doktorand/forskare/anställd] på Karolinska Institutet och pendlar även till Uppsala, så nära pendeltåg är ett plus.
 > Skötsam, rökfri, inga husdjur. Referenser från tidigare hyresvärdar finns. Hör gärna av dig i DM!
 
 **English**
-> Looking for an apartment (or room) in Solna / Vasastan / Sundbyberg / Sollentuna from [10–31] January 2027, ideally for [X months / long-term].
+> Looking for an apartment (or room) in Solna / Vasastan / Kungsholmen / Sundbyberg from [10–31] January 2027, ideally for [X months / long-term].
 > Budget up to 12,000 SEK/month. I'm a [PhD student / researcher / employee] at Karolinska Institutet who also commutes to Uppsala, so being near the commuter train is a plus.
 > Tidy, non-smoker, no pets, with references from previous landlords. Please DM me!
 

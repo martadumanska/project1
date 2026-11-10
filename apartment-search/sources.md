@@ -32,17 +32,17 @@ Replace `{MONTH}` with "januari 2027". As the date nears, also try "december 202
 2. `qasa Solna rum i lägenhet {MONTH}`
 3. `qasa Vasastan Hagastaden Odenplan lägenhet {MONTH}`
 4. `qasa Sundbyberg lägenhet {MONTH}`
-5. `qasa Sollentuna Upplands Väsby lägenhet {MONTH}`
-6. `qasa Kungsholmen Norrmalm lägenhet {MONTH}`
-7. `qasa Knivsta lägenhet {MONTH}`
+5. `qasa Kungsholmen Norrmalm lägenhet {MONTH}`
+6. `qasa Södermalm Östermalm Gärdet lägenhet {MONTH}`
+7. `qasa Bergshamra Ulriksdal Sollentuna lägenhet {MONTH}`
 
 ### Samtrygg (`allowed_domains: ["samtrygg.se"]`)
 8. `Samtrygg Solna Sundbyberg 1rok 2rok {MONTH}`
-9. `Samtrygg Stockholm Vasastan Kungsholmen Sollentuna {MONTH}`
+9. `Samtrygg Stockholm Vasastan Kungsholmen Södermalm {MONTH}`
 
 ### Aggregators (`allowed_domains: ["bofrid.se","bostadsportal.se","hyresbostad.se","bostadszonen.se","boio.se","hyrenbostad.se","en.hyrenbostad.se","bostaddirekt.com"]`)
 10. `lägenhet uthyres Solna tillträde {MONTH}`
-11. `lägenhet uthyres Sundbyberg Sollentuna tillträde {MONTH}`
+11. `lägenhet uthyres Sundbyberg Hagastaden tillträde {MONTH}`
 12. `lägenhet uthyres Vasastan Kungsholmen {MONTH}`
 
 ### KI (`allowed_domains: ["staff.ki.se","ki.se"]`)

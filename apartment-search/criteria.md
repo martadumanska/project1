@@ -7,7 +7,7 @@ and the next run follows the new version.
 
 | Filter | Value |
 |---|---|
-| Location | Stockholm region, within the commute tiers below. Anything outside them is dropped. |
+| Location | Stockholm region, within the location tiers below. Anything outside them is dropped. |
 | Rent | **≤ 12,000 SEK/month**, counting the platform's tenant fee (Qasa and Samtrygg show prices with the fee included). |
 | Move-in | **On or before 31 Jan 2027.** Anything starting later is dropped. |
 | Status | Must look active. A listing whose move-in date is already past is dropped unless it says the date is flexible. |
@@ -25,20 +25,22 @@ The current housing presumably ends around 31 Jan, so the ideal is a short overl
 | December 2026 | Early. Only worth it if the landlord will move the start date. |
 | "Immediately" / not stated | Ask the landlord. Low priority. |
 
-### Commute tiers
-The targets are **KI campus Solna**, around Solnavägen and Karolinska University Hospital Solna, and **Uppsala C**.
-SL commuter train **line 40** (Uppsala C – Knivsta – Arlanda C – Upplands Väsby – Sollentuna – Solna – Odenplan – City – …) links the two directly.
+### Location tiers
+**Priority: living close to central Stockholm and KI Solna.** A short Uppsala commute is a bonus, not the main goal.
+The targets are **KI campus Solna** (around Solnavägen and Karolinska University Hospital Solna), **central Stockholm**, and **Uppsala C**.
+SL commuter train **line 40** (Uppsala C – Knivsta – Arlanda C – Upplands Väsby – Sollentuna – Solna – Odenplan – City – …) gives the
+inner areas a direct train to Uppsala.
 The times below are rough estimates. The report gives door-to-door times for top picks only after checking them.
 
-| Tier | Areas | To KI Solna | To Uppsala C |
-|---|---|---|---|
-| **A** | Solna: Arenastaden, Hagalund, Frösunda, Solna centrum, Solna Business Park, Råsunda, Skytteholm, Ulriksdal. Hagastaden. Vasastan near Odenplan/St Eriksplan/Roslagstull. Sollentuna (near the station). | walk, bike or ≤ 20 min | ~35–55 min, direct on line 40 |
-| **B** | Sundbyberg, Huvudsta, Rissne, Ursvik, Bergshamra, Kungsholmen, Norrmalm near Stockholm C, Helenelund, Häggvik, Upplands Väsby, Knivsta (Uppsala county) | ~15–35 min | ~25–65 min, direct or one change |
-| **C** | Elsewhere in Stockholm with ≤ ~45 min to KI Solna **and** ≤ ~75 min to Uppsala C | ≤ 45 min | ≤ 75 min |
-| Drop | Anything worse than tier C, such as Södertälje, Tumba, Täby or the far south | | |
+| Tier | Areas | To KI Solna | To Stockholm City | To Uppsala C |
+|---|---|---|---|---|
+| **A** | Hagastaden. Vasastan. Norrmalm. Kungsholmen. Inner Solna: Hagalund, Arenastaden, Frösunda, Råsunda, Solna centrum, Skytteholm, Solna Business Park, Huvudsta | walk, bike or ≤ 20 min | ≤ 20 min | ~45–60 min, direct on line 40 from Solna or Odenplan |
+| **B** | Sundbyberg (incl. Rissne, Ursvik, Hallonbergen), Bergshamra, Ulriksdal, Södermalm, Östermalm, Gärdet, Essingeöarna | ~15–30 min | ≤ 25 min | ~50–70 min |
+| **C** | Sollentuna, Helenelund, Häggvik, Bromma, other places ≤ ~45 min to KI Solna | ≤ 45 min | ≤ 35 min | ≤ 75 min |
+| **D** | Upplands Väsby, Knivsta, Märsta: close to Uppsala but far from Stockholm. Only listed if the deal is exceptional. | ~25–40 min | ~25–40 min | ~10–30 min |
+| Drop | Anything else, such as Södertälje, Tumba, Täby or the far south | | | |
 
-Tickets: SL tickets are valid south of Arlanda and UL tickets north of it. Commuting to Uppsala therefore needs both, or a Movingo pass on SJ/Mälartåg.
-An UL 30-day ticket costs 1,150 SEK at full price, so budget for the extra cost if trips to Uppsala are frequent.
+Tickets: SL and UL travel is free for the user, so ticket cost is **not** a factor. Only travel time and closeness to Stockholm count.
 
 ### Home type
 1. A whole apartment, ideally ≥ 25 m².
@@ -53,7 +55,7 @@ Next is a fixed term of 6 months or more. Last is a fixed term under 6 months.
 
 | Part | Points |
 |---|---|
-| Commute | A = 40, B = 30, C = 15 |
+| Location | A = 40, B = 30, C = 15, D = 5 |
 | Move-in date | 10–31 Jan = 20, 1–9 Jan = 15, Dec 2026 = 8, ASAP / not stated = 5 |
 | Price | ≤ 9,000 = 15, 9,001–10,500 = 11, 10,501–12,000 = 7 |
 | Home type | Apartment ≥ 25 m² = 10, apartment < 25 m² = 7, room = 3 |
