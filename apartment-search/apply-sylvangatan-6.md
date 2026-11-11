@@ -19,6 +19,8 @@
 
 **Still to check on the listing:**
 - [ ] Move-in date (tillträde): ______ (must be **on or before 31 Jan 2027**)
+  **Warning:** search results for this flat (1 room, 30 m², 9,992 kr) show a **move-in date of 1 March 2027**, a month after your deadline.
+  Check the date on the listing. If it is 1 March, you would need somewhere to stay in February (a short sublet), or a different flat.
 - [ ] Last day to apply: ______
 
 ## What it will cost
@@ -28,7 +30,7 @@
 |---|---|---|
 | Rent | **9,992** | From the listing. Heat and basic TV are included. |
 | Electricity | 350–550 | About 125 kWh a month (breakdown below) at roughly 1.5–2.0 SEK/kWh all-in, plus a fixed grid fee of about 150–250 SEK. Higher in winter. |
-| Hot water | 100–200 | Metered, so you pay for what you use. This covers showers and the taps only: the dishwasher and washing machine heat their own water with electricity. |
+| Hot water | 100–200 | Metered, so you pay for what you use. For a smaller flat in the same building, Birger Bostad charges a **preliminary 150 kr a month**, adjusted every quarter. This covers showers and taps only: the dishwasher and washing machine heat their own water with electricity. |
 | Internet | 200–400 | Not included. Ask whether the building has fibre. |
 | Home insurance | 100–200 | Most landlords require it. |
 | **Total** | **≈ 10,750–11,350** | **Plan for about 11,000 a month** (closer to 11,300 in winter). That's about 38% of your ~29,000 take-home pay. |
@@ -61,10 +63,22 @@
 
 ## Step 1: Get set up (do this today)
 - [ ] **Swedish BankID** on your phone. Qasa needs it to apply to first-hand ads from professional landlords.
-  *No Swedish BankID yet?* Qasa's help says you can apply through **homeq.se** instead, since the same first-hand ads are listed there. HomeQ's own pages say membership needs Mobile BankID, so check this first.
+  *No Swedish BankID yet?* Qasa's help says you can apply on **homeq.se** instead, but HomeQ's own pages say membership needs Mobile BankID.
+  The two sources disagree, so contact HomeQ support if you don't have BankID.
 - [ ] **Log in to Qasa** and fill in your profile completely: photo, a short "about me", and your occupation.
 - [ ] **Link your Qasa account to HomeQ** (Profile → Linked accounts). You can't apply without this, and it's what starts your queue points (1 point per day).
   If your Qasa account is older, you get 1 point per day of membership, up to 500, when you link it.
+
+### Do I need to join another queue? No, not for this flat.
+- **HomeQ is the queue.** Birger Bostad lists its Sylvangatan 6 flats on **HomeQ**, and Qasa shows the same ads.
+  Linking your Qasa account to HomeQ puts you in HomeQ's queue. It's **free**, and the points it collects are the ones this listing uses ("vägledande efter köpoäng").
+- **No separate Birger Bostad queue.** Their own website only has interest forms for **buying** new-build flats; there's no rental queue to join.
+- **Your points count from the day you link**, so link today. They only reset when you sign a contract.
+- **Optional, for the long run:** Stockholm's city housing queue, **Bostadsförmedlingen** (bostad.stockholm.se), is completely separate.
+  It costs **200 kr a year** and needs a Swedish personnummer or samordningsnummer. Average waits are several years, so it won't help for January.
+  But time in the queue builds up, so it's worth joining now if you plan to stay in Stockholm.
+- **BankID:** HomeQ's own pages say you need **Mobile BankID** and must be over 18 to become a member.
+  If you don't have Mobile BankID yet, ask HomeQ support how to join.
 
 ## Step 2: Check that you meet the criteria
 - [ ] **Income:** landlords usually ask for **2–3 × the monthly rent**, which here is **about 20,000–30,000 SEK/month** (3 × 9,992 = 29,976).
@@ -130,4 +144,4 @@ Replace the `[brackets]`. Keep it short: 4–6 sentences.
 > I'm tidy and reliable and always pay on time. References from a previous landlord are available on request. Thank you for considering my application!
 
 ---
-*Sources: the listing (screenshots), [How first-hand contracts at Qasa work](https://support.qasa.se/hc/en-us/articles/27763212415761-How-renting-first-hand-contracts-at-Qasa-works), [Application sorting, criteria and queue points](https://support.qasa.se/hc/en-us/articles/27763664511249-Application-sorting-criteria-and-queue-points), [Income verification FAQ](https://support.qasa.se/hc/en-us/articles/27890189099793-FAQ-about-income-verifications), [What happens after I apply](https://support.qasa.se/hc/en-us/articles/27890296158865-What-happens-after-I-have-applied-to-a-first-hand-contract), [Linked accounts](https://support.qasa.se/hc/en-us/articles/25735065112209-Linked-accounts), [Birger Bostad is part of Fabege](https://www.fabege.se/en/about-fabege/urban-development/residential-properties2/), [what "vägledande efter köpoäng" means](https://boio.se/ordlista/kopoang).*
+*Sources: the listing (screenshots), [How first-hand contracts at Qasa work](https://support.qasa.se/hc/en-us/articles/27763212415761-How-renting-first-hand-contracts-at-Qasa-works), [Application sorting, criteria and queue points](https://support.qasa.se/hc/en-us/articles/27763664511249-Application-sorting-criteria-and-queue-points), [Income verification FAQ](https://support.qasa.se/hc/en-us/articles/27890189099793-FAQ-about-income-verifications), [What happens after I apply](https://support.qasa.se/hc/en-us/articles/27890296158865-What-happens-after-I-have-applied-to-a-first-hand-contract), [Linked accounts](https://support.qasa.se/hc/en-us/articles/25735065112209-Linked-accounts), [Birger Bostad is part of Fabege](https://www.fabege.se/en/about-fabege/urban-development/residential-properties2/), [what "vägledande efter köpoäng" means](https://boio.se/ordlista/kopoang), [HomeQ listing for Sylvangatan 6](https://www.homeq.se/lagenhet/231029-1rum-solna-stockholms-lan-sylvangatan-6), [HomeQ: what's required to become a member](https://help.homeq.se/en/articles/65897-what-is-required-to-become-a-member), [HomeQ: how queue points work](https://help.homeq.se/en/articles/64106-how-do-i-collect-queue-points), [Bostadsförmedlingen: queue fee](https://bostad.stockholm.se/sa-gar-det-till/regler/avgift/), [Bostadsförmedlingen: queue rules](https://bostad.stockholm.se/sa-gar-det-till/regler/Regler/), [Birger Bostad: find a home](https://www.birgerbostad.se/hitta-bostad/hitta-bostad/), [Sokbostad: Birger Bostad flat at Sylvangatan 6 (hot water charge)](https://www.sokbostad.se/hyresobjekt/sylvangatan-6-solna-7/).*
