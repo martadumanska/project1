@@ -44,8 +44,9 @@ const email = [
     ". The chapters in the video let you jump straight to each talk and to the panel discussion.",
   ]),
   block([
-    "We would be very grateful if you could take a few minutes to share your feedback. It helps us plan the next seminars in the series: ",
+    "We have also prepared a short form where you can request a certificate of attendance, stay connected with the Health Bridge Network and hear about future seminars: ",
     { fill: "[link to form]" },
+    ". It also has space for your feedback on the seminar, and we would be very grateful for a few words, as it helps us plan the next seminars in the series.",
   ]),
   block("We hope to see you again at future Health Bridge events."),
   line("Kind regards,"),
