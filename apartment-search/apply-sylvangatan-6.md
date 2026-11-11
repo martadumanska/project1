@@ -66,7 +66,7 @@
   *No Swedish BankID yet?* Qasa's help says you can apply on **homeq.se** instead, but HomeQ's own pages say membership needs Mobile BankID.
   The two sources disagree, so contact HomeQ support if you don't have BankID.
 - [ ] **Log in to Qasa** and fill in your profile completely: photo, a short "about me", and your occupation.
-- [ ] **Link your Qasa account to HomeQ.** There's no separate menu for this: press **Apply** on the listing, and Qasa asks you to link an existing HomeQ account or create one, confirmed with BankID. You can't apply without the link, and it's what starts your queue points (1 point per day).
+- [ ] **Link your Qasa account to HomeQ.** There's no separate menu for this. When you press **Apply**, Qasa either asks you to link or create a HomeQ account (with BankID), or links it automatically in the background. To check it worked, log in on **homeq.se** with BankID and look for your queue points. You can't apply without the link, and it's what starts your queue points (1 point per day).
   If your Qasa account is older, you get 1 point per day of membership, up to 500, when you link it.
 
 ### Do I need to join another queue? No, not for this flat.
