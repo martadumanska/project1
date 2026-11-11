@@ -18,9 +18,9 @@
 | Location | Hagalund, Solna (tier A): a few minutes' walk to **Solna station** (train line 40 to Uppsala) and walking or cycling distance to **KI Solna** |
 
 **Still to check on the listing:**
-- [ ] Move-in date (tillträde): ______ (must be **on or before 31 Jan 2027**)
-  **Warning:** search results for this flat (1 room, 30 m², 9,992 kr) show a **move-in date of 1 March 2027**, a month after your deadline.
-  Check the date on the listing. If it is 1 March, you would need somewhere to stay in February (a short sublet), or a different flat.
+- [x] Move-in date (tillträde): **1 March 2027** (confirmed on the listing), with an open-ended lease.
+  That's **1 month after your 31 Jan deadline**, so you'd need a February solution: ask your current landlord to extend to 28 Feb, or find a short sublet.
+  Also in the same building: a **21 m² flat at 8,200 SEK from 1 Dec 2026**. Applying for both is free.
 - [ ] Last day to apply: ______
 
 ## What it will cost
