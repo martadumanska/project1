@@ -6,6 +6,7 @@ Regenerate the documents from this folder (Node with the `docx` package, plus Py
 node build/agenda.js ../Seminar2_Agenda.docx
 node build/certificate.js ../Seminar2_Certificate_template.docx
 node build/email.js ../Seminar2_Email_and_Question_Form.docx
+node build/followup.js ../Seminar2_FollowUp_Email_and_Timestamps.docx
 python3 build/finalize_docx.py ../Seminar2_Certificate_template.docx
 ```
 
