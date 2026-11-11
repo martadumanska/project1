@@ -11,15 +11,51 @@
 | Kitchen | HTH kitchen with Electrolux fridge/freezer, microwave, induction hob, oven and **dishwasher** |
 | Bathroom | Tiled, with a **combined washer-dryer** |
 | Extras | Basement storage room |
-| Not included in the rent | **Electricity and hot water**: you pay these on top of the rent |
+| Rent | **9,992 SEK/month** (heat and basic TV included) |
+| Not included in the rent | **Electricity, hot water and internet** (also parking or a garage, if you need one) |
 | How tenants are chosen | **"Vägledande efter köpoäng"** (guided by queue points; see step 4) |
 | Landlord's criteria | Income, credit history, number of moves, household size (the exact values are hidden unless you have Qasa Premium) |
 | Location | Hagalund, Solna (tier A): a few minutes' walk to **Solna station** (train line 40 to Uppsala) and walking or cycling distance to **KI Solna** |
 
-**Not visible in your screenshots, so check them on the listing and write them here:**
-- [ ] Rent: ______ SEK/month (must be ≤ 12,000; remember electricity and hot water come on top)
+**Still to check on the listing:**
 - [ ] Move-in date (tillträde): ______ (must be **on or before 31 Jan 2027**)
 - [ ] Last day to apply: ______
+
+## What it will cost
+
+### Every month
+| Cost | Estimate (SEK) | Basis |
+|---|---|---|
+| Rent | **9,992** | From the listing. Heat and basic TV are included. |
+| Electricity | 350–550 | About 125 kWh a month (breakdown below) at roughly 1.5–2.0 SEK/kWh all-in, plus a fixed grid fee of about 150–250 SEK. Higher in winter. |
+| Hot water | 100–200 | Metered, so you pay for what you use. This covers showers and the taps only: the dishwasher and washing machine heat their own water with electricity. |
+| Internet | 200–400 | Not included. Ask whether the building has fibre. |
+| Home insurance | 100–200 | Most landlords require it. |
+| **Total** | **≈ 10,750–11,350** | **Plan for about 11,000 a month** (closer to 11,300 in winter). That's about 38% of your ~29,000 take-home pay. |
+
+### Electricity, based on your use
+| Use | How often | kWh per month |
+|---|---|---|
+| Washing | 2 cycles a week (~0.8 kWh each) | ~7 |
+| Drying (washer-dryer) | every other week, 2 loads (~3 kWh each) | ~13 |
+| Dishwasher | every other day (~0.9 kWh each) | ~13 |
+| Fridge/freezer | always on | ~20 |
+| Cooking (induction hob, oven, microwave) | daily | ~25–35 |
+| Lights, laptop, phone, router, kettle | daily | ~30–50 (more in winter) |
+| **Total** | | **~110–140** |
+
+- Your laundry and dishwasher habits add only **about 50–70 SEK a month**. Most of the bill is the fixed grid fee and everyday use.
+- If the bathroom has **electric floor heating on your meter**, add about 30–60 kWh (50–120 SEK) a month. Ask the landlord.
+- These are estimates based on typical 2025–26 Stockholm prices. Your first bills will show the real numbers.
+
+### One-time costs
+| Cost | Estimate (SEK) |
+|---|---|
+| Furniture and kitchen basics (the flat is unfurnished) | 5,000–10,000 second-hand (Blocket, Facebook Marketplace, Sellpy), 15,000–25,000 new |
+| Lamps (Swedish flats often have no ceiling lights) | 500–1,500 |
+| Moving (van rental) | 1,000–3,000; more with movers |
+| Deposit | Usually none for first-hand, but ask |
+| Two rents at once | Only if you move in before your current lease ends: 9,992 for a full month, less for part of one |
 
 ---
 
@@ -31,8 +67,8 @@
   If your Qasa account is older, you get 1 point per day of membership, up to 500, when you link it.
 
 ## Step 2: Check that you meet the criteria
-- [ ] **Income:** landlords usually ask for **2–3 × the monthly rent**. Example: at 9,000 SEK rent you'd need about 18,000–27,000 SEK/month.
-  Some landlords only accept permanent employment, so check what Birger Bostad accepts (see the questions at the end).
+- [ ] **Income:** landlords usually ask for **2–3 × the monthly rent**, which here is **about 20,000–30,000 SEK/month** (3 × 9,992 = 29,976).
+  **Your 36,000 SEK before tax passes even a 3× rule.** Some landlords only accept permanent employment, so check what Birger Bostad accepts (see the questions at the end).
 - [ ] **Credit history:** no payment remarks (betalningsanmärkningar) or debts with the Enforcement Authority (Kronofogden).
 - [ ] **Household:** for a 1-room flat this usually means 1–2 people.
 - [ ] **Number of moves:** some landlords limit how many times you've moved in recent years.
@@ -78,6 +114,7 @@ With few points, a **complete, well-written application** is how you stand out, 
 4. Roughly how much do electricity and hot water cost per month for this flat?
 5. Is internet included or available? Who is the electricity grid company?
 6. Is there a deposit?
+7. Do I sign my own electricity contract, or do you bill electricity with the rent? Is any floor heating on my meter?
 
 ## Personal letter templates
 Replace the `[brackets]`. Keep it short: 4–6 sentences.
