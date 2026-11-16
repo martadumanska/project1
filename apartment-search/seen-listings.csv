@@ -10,7 +10,7 @@ first_seen,source,address,area,type,size_m2,rent_sek,move_in,lease_end,tier,scor
 2026-11-10,Qasa,Roslagsgatan,Vasastan,room,17,5827,2027-01-01,open-ended,A,88,https://qasa.com/se/sv/find-home?searchAreas=Stockholm%7E%7Ese,new
 2026-11-10,Qasa,Erik Sandbergs gata,Solna,room,15,6886,2027-01-01,2027-05-31,A,79,https://qasa.com/se/sv/find-home?searchAreas=Solna_kommun%7E%7Ese,new
 2026-11-10,Qasa,Marieberg,Kungsholmen,room,20,6357,2026-12-01,,A,81,https://qasa.com/se/sv/find-home?searchAreas=Kungsholmen%7EStockholm%7Ese,new
-2026-11-10,Samtrygg,Alphyddevägen 9,Solna,apartment,,12650,,open-ended,A,over-budget,https://www.samtrygg.se/object/28rkhwtctevwp1cljshp/stockholm/solna/alphyddevagen-9/1-rok,over-budget
+2026-11-10,Samtrygg,Alphyddevägen 9,Solna,apartment,,12650,,open-ended,A,over-budget,https://www.samtrygg.se/object/28rkhwtctevwp1cljshp/stockholm/solna/alphyddevagen-9/1-rok,"removed (ad dated 2025-12, stale)"
 2026-11-10,Qasa,Ursviksvägen,Sundbyberg,apartment,38,12714,2027-01-01,open-ended,B,over-budget,https://qasa.com/se/sv/find-home?homeTypes=apartment&searchAreas=Sundbybergs_kommun%7E%7Ese,over-budget
 2026-11-10,Qasa,Mejerskans Gata 4,Knivsta,apartment,43,7928,2027-01-01,open-ended,D,60,https://qasa.com/se/sv/find-home?homeTypes=apartment&searchAreas=knivsta%7E%7Ese,new (verify not swap-only)
 2026-11-10,Bofrid,Karolinska Vägen 1A,Solna (Norra Hagastaden),apartment,29,6500,,<1 year,A,,https://bofrid.se/en/rent-apartment/sweden/stockholms-lan/solna/norra-hagastaden/karolinska-vagen-1a-29kvm-lagenhet-2511281450,"removed (posted 2025, ends 2026-11-28)"
@@ -31,3 +31,9 @@ first_seen,source,address,area,type,size_m2,rent_sek,move_in,lease_end,tier,scor
 2026-11-10,Qasa,Lidängsgatan 4,Knivsta,apartment,26,7083,2027-02-01,,D,date-miss,https://qasa.com/se/sv/find-home?homeTypes=apartment&searchAreas=knivsta%7E%7Ese,date-miss
 2026-11-10,Qasa (found by you),Sylvangatan 6,Solna (Hagalund),apartment,30,9992,2027-03-01,first-hand,A,81,https://qasa.com/se/sv/home/1501017,applying - move-in 1 Mar (1 month after deadline; needs Feb bridge)
 2026-11-11,Qasa (found by you),Sylvangatan 6,Solna (Hagalund),apartment,21,8200,2026-12-01,open-ended,A,,https://www.sokbostad.se/hyresobjekt/sylvangatan-6-solna-7/,applying - move-in 1 Dec (2 months early; double rent Dec+Jan)
+2026-11-16,boio,Stationsgatan 1,Sundbyberg,apartment,33,7517,2027-01-01,,B,73,https://boio.se/objekt/stationsgatan-1-sundbyberg-283151,new (check landlord / queue)
+2026-11-16,Qasa,Solstigen 13,Sollentuna,apartment,26,7474,2027-01-01,open-ended,C,70,https://qasa.com/se/sv/find-home?homeTypes=apartment&searchAreas=Sollentuna_kommun%7E%7Ese,new (first-hand)
+2026-11-16,Qasa,Storgatan,Solna (as listed; check),room,14,8952,2027-01-01,open-ended,A,88,https://qasa.com/se/sv/find-home?searchAreas=Solna_kommun%7E%7Ese,new
+2026-11-16,Qasa,Engelbrekts väg,Sollentuna,other,30,12290,2027-01-01,open-ended,C,over-budget,https://qasa.com/se/en/find-home?page=2&searchAreas=Sollentuna_kommun%7E%7Ese,over-budget
+2026-11-16,Qasa,Honnörsgatan,Solna (Ulriksdal),room,,,2027-02-01,2027-08-15,A,date-miss,https://qasa.com/no/en/home/1286007,date-miss (possible Feb bridge)
+2026-11-16,Samtrygg,Siargatan 17,Södermalm,apartment,,11707,,6 months,B,,https://www.samtrygg.se/object/c0cia8papxg5jkllfd8u/stockholm/stockholm/siargatan-17/1-rok,"removed (lease Dec 2022-May 2023, stale)"
