@@ -19,7 +19,7 @@ const F_NAME = "Barlow Semi Condensed SemiBold";
 
 const SEMINAR_LINE_1 = "For participation in the online seminar «From Crisis to Contribution:";
 const SEMINAR_LINE_2 = "Ukraine’s Role in Advancing Health Diplomacy»";
-const DATE_LINE = "4 November 2026, 2 hours";
+const DATE_LINE = "4 November 2026";
 
 const SIGNATORIES = [
   { name: "Marie HASSELBERG", lines: ["Head of Department", "Department of Global Public Health", "Karolinska Institutet"] },
@@ -38,7 +38,7 @@ const PAGE_W = 16838, MARGIN_X = 1080;
 const CONTENT_W = PAGE_W - 2 * MARGIN_X;
 
 const logos = [
-  { file: "logos/ki_seal_hires.png", w: 105.6, h: 106, cell: 2909 },
+  { file: "logos/ki_logo_full.png", w: 204, h: 83.4, cell: 4404 },
   { file: "logos/bogomolets.png", w: 97.8, h: 106, cell: 2794 },
   { file: "logos/nubip.png", w: 106, h: 106, cell: 2918 },
   { file: "logos/latvia.png", w: 204, h: 69.7, cell: 4368 },
@@ -81,9 +81,16 @@ const signatures = new Table({
       borders: noBorders,
       verticalAlign: VerticalAlign.TOP,
       children: [
+        // Space to sign, above a short line
+        new Paragraph({
+          spacing: { line: 760, lineRule: "exact" },
+          indent: { left: 420, right: 420 },
+          border: { bottom: { style: BorderStyle.SINGLE, size: 4, color: BLUE, space: 1 } },
+          children: [],
+        }),
         new Paragraph({
           alignment: AlignmentType.CENTER,
-          spacing: { after: 40, line: 340, lineRule: "exact" },
+          spacing: { before: 100, after: 40, line: 340, lineRule: "exact" },
           children: [new TextRun({ text: s.name, font: F_NAME, size: 27, color: BLUE })],
         }),
         ...s.lines.map((t) => new Paragraph({
@@ -126,7 +133,7 @@ const footerRow = new Table({
         width: { size: sideW, type: WidthType.DXA }, borders: noBorders, verticalAlign: VerticalAlign.CENTER,
         children: [new Paragraph({
           alignment: AlignmentType.RIGHT,
-          children: [new ImageRun({ type: "png", data: img("logos/si_logo_trim.png"), transformation: { width: 95, height: 29.5 } })],
+          children: [new ImageRun({ type: "png", data: img("logos/si_logo_black.png"), transformation: { width: 95, height: 29.5 } })],
         })],
       }),
     ],
@@ -159,7 +166,7 @@ const doc = new Document({
       centered(SEMINAR_LINE_1, { size: 24, before: 760, line: 420 }),
       centered(SEMINAR_LINE_2, { size: 24, line: 420 }),
       centered(participant, { font: F_NAME, size: 52, before: 700, line: 720 }),
-      new Paragraph({ spacing: { before: 0, line: 1350, lineRule: "exact" }, children: [] }),
+      new Paragraph({ spacing: { before: 0, line: 420, lineRule: "exact" }, children: [] }),
       signatures,
     ],
   }],

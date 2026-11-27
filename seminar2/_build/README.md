@@ -15,4 +15,6 @@ python3 build/finalize_docx.py ../Seminar2_Certificate_template.docx
 
 The certificate embeds Poppins and Barlow Semi Condensed (SIL Open Font License, see `fonts/`),
 so it renders the same on computers that don't have those fonts installed.
-Logos are taken from the Seminar 1 certificate draft, the invitation, and the KI and Swedish Institute logo files.
+Logos are taken from the Seminar 1 certificate draft, the invitation, and the Swedish Institute logo file
+(`si_logo_black.png` is that file recoloured to pure black). The KI logo with wordmark (`ki_logo_full.svg`/`.png`)
+is the print logo from ki.se.
