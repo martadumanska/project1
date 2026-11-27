@@ -39,8 +39,8 @@ const CONTENT_W = PAGE_W - 2 * MARGIN_X;
 
 const logos = [
   { file: "logos/ki_logo_full.png", w: 204, h: 83.4, cell: 4404 },
-  { file: "logos/bogomolets.png", w: 97.8, h: 106, cell: 2794 },
-  { file: "logos/nubip.png", w: 106, h: 106, cell: 2918 },
+  { file: "logos/bogomolets_hires.png", w: 99, h: 106, cell: 2794 },
+  { file: "logos/nubip_hires.png", w: 106.3, h: 106, cell: 2918 },
   { file: "logos/latvia.png", w: 204, h: 69.7, cell: 4368 },
 ];
 const logoTableW = logos.reduce((s, l) => s + l.cell, 0);

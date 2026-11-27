@@ -17,4 +17,5 @@ The certificate embeds Poppins and Barlow Semi Condensed (SIL Open Font License,
 so it renders the same on computers that don't have those fonts installed.
 Logos are taken from the Seminar 1 certificate draft, the invitation, and the Swedish Institute logo file
 (`si_logo_black.png` is that file recoloured to pure black). The KI logo with wordmark (`ki_logo_full.svg`/`.png`)
-is the print logo from ki.se.
+is the print logo from ki.se. `bogomolets_hires.png` is the crest from nmuofficial.com, and `nubip_hires.png`
+is rendered from NUBiP's official English round logo (`nubip_circle_EN.svg`, from the brand files at nubip.edu.ua/en/visual).
